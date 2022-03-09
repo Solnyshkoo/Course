@@ -18,7 +18,7 @@
 		5E7EC08527D91D5E00A93BF2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08427D91D5E00A93BF2 /* MainViewModel.swift */; };
 		5E7EC08727D91EB400A93BF2 /* ClassicTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08627D91EB400A93BF2 /* ClassicTextField.swift */; };
 		5E7EC08927D9249A00A93BF2 /* ClassicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08827D9249A00A93BF2 /* ClassicButton.swift */; };
-		5E7EC08B27D92FD700A93BF2 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08A27D92FD700A93BF2 /* AuthorizationView.swift */; };
+		5E7EC08B27D92FD700A93BF2 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08A27D92FD700A93BF2 /* RegistrationView.swift */; };
 		5E7EC08D27D93F9200A93BF2 /* SecretTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08C27D93F9200A93BF2 /* SecretTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +35,7 @@
 		5E7EC08427D91D5E00A93BF2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		5E7EC08627D91EB400A93BF2 /* ClassicTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicTextField.swift; sourceTree = "<group>"; };
 		5E7EC08827D9249A00A93BF2 /* ClassicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicButton.swift; sourceTree = "<group>"; };
-		5E7EC08A27D92FD700A93BF2 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		5E7EC08A27D92FD700A93BF2 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		5E7EC08C27D93F9200A93BF2 /* SecretTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,7 +110,7 @@
 				5E7EC08227D91C8800A93BF2 /* MainView.swift */,
 				5E7EC08627D91EB400A93BF2 /* ClassicTextField.swift */,
 				5E7EC08827D9249A00A93BF2 /* ClassicButton.swift */,
-				5E7EC08A27D92FD700A93BF2 /* AuthorizationView.swift */,
+				5E7EC08A27D92FD700A93BF2 /* RegistrationView.swift */,
 				5E7EC08C27D93F9200A93BF2 /* SecretTextField.swift */,
 			);
 			path = "View Controller";
@@ -220,7 +220,7 @@
 				5E7EC08727D91EB400A93BF2 /* ClassicTextField.swift in Sources */,
 				5E7EC07127D9143F00A93BF2 /* Persistence.swift in Sources */,
 				5E7EC06A27D9143D00A93BF2 /* ContentView.swift in Sources */,
-				5E7EC08B27D92FD700A93BF2 /* AuthorizationView.swift in Sources */,
+				5E7EC08B27D92FD700A93BF2 /* RegistrationView.swift in Sources */,
 				5E7EC08D27D93F9200A93BF2 /* SecretTextField.swift in Sources */,
 				5E7EC06827D9143D00A93BF2 /* CourseApp.swift in Sources */,
 			);

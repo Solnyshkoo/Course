@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-struct AuthorizationView: View {
+struct RegistrationView: View {
     var body: some View {
     Circle()
     }
@@ -15,8 +15,8 @@ struct AuthorizationView: View {
     
 }
 
-struct AuthorizationView_Previews: PreviewProvider {
+struct RegistrationView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthorizationView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        RegistrationView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

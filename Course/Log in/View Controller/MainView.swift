@@ -13,6 +13,7 @@ struct MainView: View {
     @State var user = ""
     @State var pass = ""
     @State var hidde = true
+    @State private var showingVideoView = false
     var body: some View {
         VStack {
             Text("Sign In").fontWeight(.heavy).font(.largeTitle).padding([.top, .bottom], 20)
@@ -37,16 +38,23 @@ struct MainView: View {
                 HStack(spacing: 8) {
                     Text("Don't Have An Account ?").foregroundColor(Color.gray.opacity(0.5))
                       
-                    Button(action: {}) {
+                    Button(action: {showingVideoView.toggle()}) {
                         Text("Sign Up")
                           
-                    }.foregroundColor(.blue)
+                    }.foregroundColor(.blue).fullScreenCover(isPresented: $showingVideoView) {
+                        RegistrationView()
+                    }
+
                       
                 }.padding(.top, 25)
             }
         }
     }
     
+    
+//        .sheet(isPresented: $showingVideoView) {
+//            AuthorizationView()
+//        }
 //    var body: some View {
 //
 //        VStack(spacing: 30) {

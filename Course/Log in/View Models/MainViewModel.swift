@@ -8,11 +8,7 @@
 import Foundation
 import SwiftUI
 final class MainViewModel: ObservableObject {
-    func logIn() {
-        NavigationView {
-            NavigationLink("new", destination: AuthorizationView())
-        }
-    }
+    
 }
 
 
