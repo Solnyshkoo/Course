@@ -13,6 +13,13 @@
 		5E7EC06F27D9143F00A93BF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7EC06E27D9143F00A93BF2 /* Preview Assets.xcassets */; };
 		5E7EC07127D9143F00A93BF2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC07027D9143F00A93BF2 /* Persistence.swift */; };
 		5E7EC07427D9143F00A93BF2 /* Course.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC07227D9143F00A93BF2 /* Course.xcdatamodeld */; };
+		5E7EC08027D916D500A93BF2 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC07F27D916D500A93BF2 /* ColorPalette.swift */; };
+		5E7EC08327D91C8800A93BF2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08227D91C8800A93BF2 /* MainView.swift */; };
+		5E7EC08527D91D5E00A93BF2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08427D91D5E00A93BF2 /* MainViewModel.swift */; };
+		5E7EC08727D91EB400A93BF2 /* ClassicTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08627D91EB400A93BF2 /* ClassicTextField.swift */; };
+		5E7EC08927D9249A00A93BF2 /* ClassicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08827D9249A00A93BF2 /* ClassicButton.swift */; };
+		5E7EC08B27D92FD700A93BF2 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08A27D92FD700A93BF2 /* AuthorizationView.swift */; };
+		5E7EC08D27D93F9200A93BF2 /* SecretTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08C27D93F9200A93BF2 /* SecretTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,13 @@
 		5E7EC06E27D9143F00A93BF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5E7EC07027D9143F00A93BF2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		5E7EC07327D9143F00A93BF2 /* Course.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Course.xcdatamodel; sourceTree = "<group>"; };
+		5E7EC07F27D916D500A93BF2 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		5E7EC08227D91C8800A93BF2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		5E7EC08427D91D5E00A93BF2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		5E7EC08627D91EB400A93BF2 /* ClassicTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicTextField.swift; sourceTree = "<group>"; };
+		5E7EC08827D9249A00A93BF2 /* ClassicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicButton.swift; sourceTree = "<group>"; };
+		5E7EC08A27D92FD700A93BF2 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		5E7EC08C27D93F9200A93BF2 /* SecretTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +69,9 @@
 		5E7EC06627D9143D00A93BF2 /* Course */ = {
 			isa = PBXGroup;
 			children = (
-				5E7EC06727D9143D00A93BF2 /* CourseApp.swift */,
+				5E7EC07A27D9164500A93BF2 /* API Service */,
+				5E7EC07E27D916B900A93BF2 /* Common */,
+				5E7EC08127D9195B00A93BF2 /* Log in */,
 				5E7EC06927D9143D00A93BF2 /* ContentView.swift */,
 				5E7EC06B27D9143F00A93BF2 /* Assets.xcassets */,
 				5E7EC07027D9143F00A93BF2 /* Persistence.swift */,
@@ -71,6 +87,59 @@
 				5E7EC06E27D9143F00A93BF2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5E7EC07A27D9164500A93BF2 /* API Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "API Service";
+			sourceTree = "<group>";
+		};
+		5E7EC07B27D9165A00A93BF2 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				5E7EC08427D91D5E00A93BF2 /* MainViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		5E7EC07C27D9168E00A93BF2 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5E7EC08227D91C8800A93BF2 /* MainView.swift */,
+				5E7EC08627D91EB400A93BF2 /* ClassicTextField.swift */,
+				5E7EC08827D9249A00A93BF2 /* ClassicButton.swift */,
+				5E7EC08A27D92FD700A93BF2 /* AuthorizationView.swift */,
+				5E7EC08C27D93F9200A93BF2 /* SecretTextField.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		5E7EC07D27D916AD00A93BF2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E7EC07E27D916B900A93BF2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5E7EC06727D9143D00A93BF2 /* CourseApp.swift */,
+				5E7EC07F27D916D500A93BF2 /* ColorPalette.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5E7EC08127D9195B00A93BF2 /* Log in */ = {
+			isa = PBXGroup;
+			children = (
+				5E7EC07D27D916AD00A93BF2 /* Model */,
+				5E7EC07C27D9168E00A93BF2 /* View Controller */,
+				5E7EC07B27D9165A00A93BF2 /* View Models */,
+			);
+			path = "Log in";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +212,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E7EC08527D91D5E00A93BF2 /* MainViewModel.swift in Sources */,
 				5E7EC07427D9143F00A93BF2 /* Course.xcdatamodeld in Sources */,
+				5E7EC08327D91C8800A93BF2 /* MainView.swift in Sources */,
+				5E7EC08027D916D500A93BF2 /* ColorPalette.swift in Sources */,
+				5E7EC08927D9249A00A93BF2 /* ClassicButton.swift in Sources */,
+				5E7EC08727D91EB400A93BF2 /* ClassicTextField.swift in Sources */,
 				5E7EC07127D9143F00A93BF2 /* Persistence.swift in Sources */,
 				5E7EC06A27D9143D00A93BF2 /* ContentView.swift in Sources */,
+				5E7EC08B27D92FD700A93BF2 /* AuthorizationView.swift in Sources */,
+				5E7EC08D27D93F9200A93BF2 /* SecretTextField.swift in Sources */,
 				5E7EC06827D9143D00A93BF2 /* CourseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
