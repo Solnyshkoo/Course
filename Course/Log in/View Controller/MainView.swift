@@ -13,7 +13,8 @@ struct MainView: View {
     @State var user = ""
     @State var pass = ""
     @State var hidde = true
-    @State private var showingVideoView = false
+    @State private var showingRegistrationView = false
+    @State private var showingRestoringView = false
     var body: some View {
         VStack {
             Text("Sign In").fontWeight(.heavy).font(.largeTitle).padding([.top, .bottom], 20)
@@ -22,26 +23,33 @@ struct MainView: View {
                     ClassicTextField(labelText: "Username", fieldText: "Enter Your Username", user: $user).padding(.bottom, 15)
                    
                     SecretTextField(labelText: "Password", fieldText: "Enter Your Password", pass: $pass)
+                    Button(action: {showingRestoringView.toggle()}) {
+                        Text("Forget password?").font(Font.system(size: 12, design: .default)).padding([.top, .leading], 5)
+                          
+                    }.foregroundColor(ColorPalette.activeText).fullScreenCover(isPresented: $showingRestoringView) {
+                        MailConfirmationView()
+                    }
+                    
                 }.padding(.horizontal, 6)
                
             }.padding()
             VStack {
                 Button(action: {}) {
-                    Text("Sign In").foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 120).padding()
+                    Text("Sign In").foregroundColor(ColorPalette.mainBackground).frame(width: UIScreen.main.bounds.width - 120).padding()
                       
-                }.background(Color.green)
+                }.background(ColorPalette.logInButtons)
                     .clipShape(Capsule())
                     .padding(.top, 45)
                   
-                Text("(or)").foregroundColor(Color.gray.opacity(0.5)).padding(.top, 30)
+                Text("(or)").foregroundColor(ColorPalette.subtitle).padding(.top, 30)
                   
                 HStack(spacing: 8) {
-                    Text("Don't Have An Account ?").foregroundColor(Color.gray.opacity(0.5))
+                    Text("Don't Have An Account ?").foregroundColor(ColorPalette.subtitle)
                       
-                    Button(action: {showingVideoView.toggle()}) {
+                    Button(action: {showingRegistrationView.toggle()}) {
                         Text("Sign Up")
                           
-                    }.foregroundColor(.blue).fullScreenCover(isPresented: $showingVideoView) {
+                    }.foregroundColor(ColorPalette.activeText).fullScreenCover(isPresented: $showingRegistrationView) {
                         RegistrationView()
                     }
 

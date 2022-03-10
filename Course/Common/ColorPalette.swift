@@ -9,8 +9,9 @@ import Foundation
 import SwiftUI
 
 class ColorPalette {
-    static var mainBackground: UIColor {
-        UIColor.white
+    // используется
+    static var mainBackground: Color {
+        Color.white
        // UIColor(red: 24/255, green: 40/255, blue: 57/255, alpha: 1)
     }
 
@@ -23,14 +24,32 @@ class ColorPalette {
         UIColor.black
        // UIColor(red: 216/255, green: 218/255, blue: 220/255, alpha: 1)
     }
+    // используется
+    static var logInButtons: Color {
+        Color.green
+       // UIColor(red: 216/255, green: 218/255, blue: 220/255, alpha: 1)
+    }
+    
+    // используется
+    static var navigationBarItem: Color {
+        Color.blue
+       // UIColor(red: 216/255, green: 218/255, blue: 220/255, alpha: 1)
+    }
+    
+    // используется
+    static var activeText: Color {
+        Color.blue
+       // UIColor(red: 216/255, green: 218/255, blue: 220/255, alpha: 1)
+    }
 
     static var text: UIColor {
         UIColor.black
        // UIColor(red: 165/255, green: 170/255, blue: 177/255, alpha: 1)
     }
 
-    static var subtitle: UIColor {
-        UIColor.gray
+    // используется
+    static var subtitle: Color {
+        Color.gray.opacity(0.5)
        // UIColor(red: 133/255, green: 139/255, blue: 146/255, alpha: 1)
     }
 }

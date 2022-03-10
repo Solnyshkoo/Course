@@ -12,8 +12,9 @@ struct RegistrationView: View {
     @State var name = ""
     @State var surname = ""
     @State var patronymic = ""
-    @State var mail = ""
+    @State var age = ""
     @State var number = ""
+    @State private var showingRegistrationView = false
     var body: some View {
         VStack {
             NavigationView {
@@ -27,19 +28,21 @@ struct RegistrationView: View {
                
                             ClassicTextField(labelText: "Patronymic", fieldText: "Write your patronymic", user: $patronymic).padding(.bottom, 15)
                
-                            ClassicTextField(labelText: "Mail", fieldText: "Write your mail", user: $mail).padding(.bottom, 15)
+                            ClassicTextField(labelText: "Age", fieldText: "Write your age", user: $age).padding(.bottom, 15)
                
                             ClassicTextField(labelText: "Number", fieldText: "Write your number", user: $number).padding(.bottom, 15)
                         }.padding(.horizontal, 6)
                
                     }.padding()
                     VStack {
-                        Button(action: {}) {
-                            Text("Sign Up").foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 120).padding()
+                        Button(action: {self.showingRegistrationView.toggle()}) {
+                            Text("Continue").foregroundColor(ColorPalette.mainBackground).frame(width: UIScreen.main.bounds.width - 120).padding()
                       
-                        }.background(Color.green)
+                        }.background(ColorPalette.logInButtons)
                             .clipShape(Capsule())
-                            .padding(.top, 15)
+                            .padding(.top, 15).foregroundColor(ColorPalette.activeText).fullScreenCover(isPresented: $showingRegistrationView) {
+                                MailConfirmationView()
+                            }
                     }
                 }.padding(.bottom, 220)
                     // padding(.top, 55)
@@ -47,7 +50,7 @@ struct RegistrationView: View {
                     .toolbar(content: {
                         ToolbarItem(placement: .navigation) {
                             Image(systemName: "arrow.left")
-                                .foregroundColor(.blue)
+                                .foregroundColor(ColorPalette.navigationBarItem)
                                 .onTapGesture {
                                     self.mode.wrappedValue.dismiss()
                                 }

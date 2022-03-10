@@ -30,7 +30,7 @@ struct SecretTextField: View {
                 }) {
                     Image(systemName: self.hidde ?
                         "eye.slash.fill" : "eye.fill")
-                        .foregroundColor(self.hidde ? Color.secondary
+                        .foregroundColor(self.hidde ? Color.secondary // TODO подумать над этим
                             : Color.green)
                 }.offset(x: -15, y: 0)
             }

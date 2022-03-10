@@ -19,6 +19,7 @@
 		5E7EC08727D91EB400A93BF2 /* ClassicTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08627D91EB400A93BF2 /* ClassicTextField.swift */; };
 		5E7EC08B27D92FD700A93BF2 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08A27D92FD700A93BF2 /* RegistrationView.swift */; };
 		5E7EC08D27D93F9200A93BF2 /* SecretTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08C27D93F9200A93BF2 /* SecretTextField.swift */; };
+		5E7EC08F27DA1DAA00A93BF2 /* MailConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08E27DA1DAA00A93BF2 /* MailConfirmationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		5E7EC08627D91EB400A93BF2 /* ClassicTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicTextField.swift; sourceTree = "<group>"; };
 		5E7EC08A27D92FD700A93BF2 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		5E7EC08C27D93F9200A93BF2 /* SecretTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretTextField.swift; sourceTree = "<group>"; };
+		5E7EC08E27DA1DAA00A93BF2 /* MailConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailConfirmationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				5E7EC08627D91EB400A93BF2 /* ClassicTextField.swift */,
 				5E7EC08A27D92FD700A93BF2 /* RegistrationView.swift */,
 				5E7EC08C27D93F9200A93BF2 /* SecretTextField.swift */,
+				5E7EC08E27DA1DAA00A93BF2 /* MailConfirmationView.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E7EC08F27DA1DAA00A93BF2 /* MailConfirmationView.swift in Sources */,
 				5E7EC08527D91D5E00A93BF2 /* LogInViewModel.swift in Sources */,
 				5E7EC07427D9143F00A93BF2 /* Course.xcdatamodeld in Sources */,
 				5E7EC08327D91C8800A93BF2 /* MainView.swift in Sources */,
