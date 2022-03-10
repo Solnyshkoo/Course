@@ -18,11 +18,11 @@ struct ClassicTextField : View {
     var body: some View {
         VStack(alignment: .leading){
             
-            Text("Username").font(.headline).fontWeight(.light).foregroundColor(Color.init(.label).opacity(0.75))
+            Text(labelText).font(.headline).fontWeight(.light).foregroundColor(Color.init(.label).opacity(0.75))
             
             HStack{
                 
-                TextField("Enter Your Username", text: $user)
+                TextField(fieldText, text: $user)
                 
             }
             

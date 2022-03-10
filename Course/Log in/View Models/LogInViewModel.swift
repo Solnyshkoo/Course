@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-final class MainViewModel: ObservableObject {
+final class LogInViewModel: ObservableObject {
     
 }
 

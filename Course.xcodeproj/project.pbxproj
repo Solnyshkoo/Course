@@ -15,9 +15,8 @@
 		5E7EC07427D9143F00A93BF2 /* Course.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC07227D9143F00A93BF2 /* Course.xcdatamodeld */; };
 		5E7EC08027D916D500A93BF2 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC07F27D916D500A93BF2 /* ColorPalette.swift */; };
 		5E7EC08327D91C8800A93BF2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08227D91C8800A93BF2 /* MainView.swift */; };
-		5E7EC08527D91D5E00A93BF2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08427D91D5E00A93BF2 /* MainViewModel.swift */; };
+		5E7EC08527D91D5E00A93BF2 /* LogInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08427D91D5E00A93BF2 /* LogInViewModel.swift */; };
 		5E7EC08727D91EB400A93BF2 /* ClassicTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08627D91EB400A93BF2 /* ClassicTextField.swift */; };
-		5E7EC08927D9249A00A93BF2 /* ClassicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08827D9249A00A93BF2 /* ClassicButton.swift */; };
 		5E7EC08B27D92FD700A93BF2 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08A27D92FD700A93BF2 /* RegistrationView.swift */; };
 		5E7EC08D27D93F9200A93BF2 /* SecretTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC08C27D93F9200A93BF2 /* SecretTextField.swift */; };
 /* End PBXBuildFile section */
@@ -32,9 +31,8 @@
 		5E7EC07327D9143F00A93BF2 /* Course.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Course.xcdatamodel; sourceTree = "<group>"; };
 		5E7EC07F27D916D500A93BF2 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		5E7EC08227D91C8800A93BF2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		5E7EC08427D91D5E00A93BF2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		5E7EC08427D91D5E00A93BF2 /* LogInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewModel.swift; sourceTree = "<group>"; };
 		5E7EC08627D91EB400A93BF2 /* ClassicTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicTextField.swift; sourceTree = "<group>"; };
-		5E7EC08827D9249A00A93BF2 /* ClassicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassicButton.swift; sourceTree = "<group>"; };
 		5E7EC08A27D92FD700A93BF2 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		5E7EC08C27D93F9200A93BF2 /* SecretTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,7 +97,7 @@
 		5E7EC07B27D9165A00A93BF2 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				5E7EC08427D91D5E00A93BF2 /* MainViewModel.swift */,
+				5E7EC08427D91D5E00A93BF2 /* LogInViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -109,7 +107,6 @@
 			children = (
 				5E7EC08227D91C8800A93BF2 /* MainView.swift */,
 				5E7EC08627D91EB400A93BF2 /* ClassicTextField.swift */,
-				5E7EC08827D9249A00A93BF2 /* ClassicButton.swift */,
 				5E7EC08A27D92FD700A93BF2 /* RegistrationView.swift */,
 				5E7EC08C27D93F9200A93BF2 /* SecretTextField.swift */,
 			);
@@ -212,11 +209,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E7EC08527D91D5E00A93BF2 /* MainViewModel.swift in Sources */,
+				5E7EC08527D91D5E00A93BF2 /* LogInViewModel.swift in Sources */,
 				5E7EC07427D9143F00A93BF2 /* Course.xcdatamodeld in Sources */,
 				5E7EC08327D91C8800A93BF2 /* MainView.swift in Sources */,
 				5E7EC08027D916D500A93BF2 /* ColorPalette.swift in Sources */,
-				5E7EC08927D9249A00A93BF2 /* ClassicButton.swift in Sources */,
 				5E7EC08727D91EB400A93BF2 /* ClassicTextField.swift in Sources */,
 				5E7EC07127D9143F00A93BF2 /* Persistence.swift in Sources */,
 				5E7EC06A27D9143D00A93BF2 /* ContentView.swift in Sources */,

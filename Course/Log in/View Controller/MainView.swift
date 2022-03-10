@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 struct MainView: View {
-    @StateObject private var mainViewMode = MainViewModel()
+    @StateObject private var mainViewMode = LogInViewModel()
     @State var enterText: String = ""
     @State var user = ""
     @State var pass = ""
