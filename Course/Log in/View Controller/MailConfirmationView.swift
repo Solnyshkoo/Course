@@ -16,6 +16,7 @@ struct MailConfirmationView: View {
     @State var hidde = true
     @State private var showingVideoView = false
     @State private var showTextFieldView = false
+    var restorePassword: Bool
     var body: some View {
         VStack {
             NavigationView {
@@ -39,9 +40,9 @@ struct MailConfirmationView: View {
                     }
                     VStack {
                         if self.showTextFieldView {
-                            checkKey(сodef: $сoder, showTextFieldView: $showTextFieldView)
+                            checkKey(сodef: $сoder, newPassword: restorePassword)
                         } else {
-                            checkKey(сodef: $сoder, showTextFieldView : $showTextFieldView).hidden()
+                            checkKey(сodef: $сoder, newPassword: restorePassword).hidden()
                         }
                 }.padding()
             }.padding(.bottom, 220)
@@ -63,23 +64,26 @@ struct MailConfirmationView: View {
 
 struct checkKey : View {
     @Binding var сodef: String
-    @Binding var showTextFieldView: Bool
+    @State var showPasswordView = false
+    var newPassword: Bool
     var body: some View {
          VStack(alignment: .leading) {
              ClassicTextField(labelText: "Сode", fieldText: "Write code from mail", user: $сodef).padding(.top, 40)
          }.padding(.horizontal, 6)
 
-         Button(action: { self.showTextFieldView = true
+         Button(action: { self.showPasswordView = true
          }) {
              Text("Check").foregroundColor(ColorPalette.mainBackground).frame(width: UIScreen.main.bounds.width - 120).padding()
          }.background(ColorPalette.logInButtons)
              .clipShape(Capsule())
-             .padding(.top, 50)
+             .padding(.top, 50).fullScreenCover(isPresented: $showPasswordView) {
+                 PasswordView(title: newPassword ? "Create new password" : "Set info ", twoPassword: newPassword)
+             }
     }
 }
 
 struct MailConfirmationView_Previews: PreviewProvider {
     static var previews: some View {
-        MailConfirmationView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        MailConfirmationView(restorePassword: false).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

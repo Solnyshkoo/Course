@@ -21,58 +21,32 @@ struct MainView: View {
             VStack {
                 VStack(alignment: .leading) {
                     ClassicTextField(labelText: "Username", fieldText: "Enter Your Username", user: $user).padding(.bottom, 15)
-                   
                     SecretTextField(labelText: "Password", fieldText: "Enter Your Password", pass: $pass)
                     Button(action: {showingRestoringView.toggle()}) {
                         Text("Forget password?").font(Font.system(size: 12, design: .default)).padding([.top, .leading], 5)
-                          
                     }.foregroundColor(ColorPalette.activeText).fullScreenCover(isPresented: $showingRestoringView) {
-                        MailConfirmationView()
+                        MailConfirmationView(restorePassword: true)
                     }
-                    
                 }.padding(.horizontal, 6)
-               
             }.padding()
             VStack {
                 Button(action: {}) {
                     Text("Sign In").foregroundColor(ColorPalette.mainBackground).frame(width: UIScreen.main.bounds.width - 120).padding()
-                      
                 }.background(ColorPalette.logInButtons)
                     .clipShape(Capsule())
                     .padding(.top, 45)
-                  
                 Text("(or)").foregroundColor(ColorPalette.subtitle).padding(.top, 30)
-                  
                 HStack(spacing: 8) {
                     Text("Don't Have An Account ?").foregroundColor(ColorPalette.subtitle)
-                      
                     Button(action: {showingRegistrationView.toggle()}) {
                         Text("Sign Up")
-                          
                     }.foregroundColor(ColorPalette.activeText).fullScreenCover(isPresented: $showingRegistrationView) {
                         RegistrationView()
-                    }
-
-                      
+                    }     
                 }.padding(.top, 25)
             }
         }
     }
-    
-    
-//        .sheet(isPresented: $showingVideoView) {
-//            AuthorizationView()
-//        }
-//    var body: some View {
-//
-//        VStack(spacing: 30) {
-//            ClassicButton(text: "Войти")
-//
-//            ClassicButton(text: "Зарегистрироваться")
-//        }.onTapGesture {
-//            print(enterText)
-//        }
-//    }
 }
 
 struct MainView_Previews: PreviewProvider {

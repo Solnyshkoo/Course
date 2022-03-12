@@ -32,7 +32,6 @@ struct RegistrationView: View {
                
                             ClassicTextField(labelText: "Number", fieldText: "Write your number", user: $number).padding(.bottom, 15)
                         }.padding(.horizontal, 6)
-               
                     }.padding()
                     VStack {
                         Button(action: {self.showingRegistrationView.toggle()}) {
@@ -41,11 +40,10 @@ struct RegistrationView: View {
                         }.background(ColorPalette.logInButtons)
                             .clipShape(Capsule())
                             .padding(.top, 15).foregroundColor(ColorPalette.activeText).fullScreenCover(isPresented: $showingRegistrationView) {
-                                MailConfirmationView()
+                                MailConfirmationView(restorePassword: false)
                             }
                     }
                 }.padding(.bottom, 220)
-                    // padding(.top, 55)
                     .navigationBarBackButtonHidden(true)
                     .toolbar(content: {
                         ToolbarItem(placement: .navigation) {
@@ -56,59 +54,10 @@ struct RegistrationView: View {
                                 }
                         }
                     })
-              
             }
             Spacer()
         }
     }
-//        VStack {
-//            NavigationView {
-//                Text("")
-//                    .navigationBarBackButtonHidden(true)
-//                    .toolbar(content: {
-//                        ToolbarItem(placement: .navigation) {
-//                            Image(systemName: "arrow.left")
-//                                .foregroundColor(.blue)
-//                                .onTapGesture {
-//                                    self.mode.wrappedValue.dismiss()
-//                                }
-//                        }
-//                    })
-//            }
-//            Text("Registration").fontWeight(.heavy).font(.largeTitle).padding([.top, .bottom], 20)
-//
-//            VStack {
-//                VStack(alignment: .leading) {
-//                    ClassicTextField(labelText: "Name", fieldText: "Write your name", user: $name).padding(.bottom, 15)
-//
-//                    ClassicTextField(labelText: "Name", fieldText: "Write your name", user: $name).padding(.bottom, 15)
-//
-//                    ClassicTextField(labelText: "Name", fieldText: "Write your name", user: $name).padding(.bottom, 15)
-//
-//                    ClassicTextField(labelText: "Name", fieldText: "Write your name", user: $name).padding(.bottom, 15)
-//
-//                    ClassicTextField(labelText: "Name", fieldText: "Write your name", user: $name).padding(.bottom, 15)
-//
-//                    Divider()
-//                }
-//            }
-//            Spacer()
-//        }
-        
-//        VStack {
-//            Text("View 2")
-//              .navigationBarBackButtonHidden(true)
-//              .toolbar(content: {
-//                 ToolbarItem (placement: .navigation)  {
-//                    Image(systemName: "arrow.left")
-//                    .foregroundColor(.blue)
-//                    .onTapGesture {
-//                        // code to dismiss the view
-//                        self.mode.wrappedValue.dismiss()
-//                    }
-//                 }
-//              })
-//        }
 }
 
 struct RegistrationView_Previews: PreviewProvider {
