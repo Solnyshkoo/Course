@@ -24,8 +24,9 @@ struct TabBar: View {
                 }
             PersonalView(people: $people)
                 .tabItem {
-                    Image(systemName: "circle")
-                    Text("Personal")
+                    Image("person")
+                        .resizable()
+                        .frame(width: 24, height: 24)
                 }
         }
     }

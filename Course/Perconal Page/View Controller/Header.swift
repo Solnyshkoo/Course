@@ -11,6 +11,7 @@ struct Header: View {
     @AppStorage("rValue") var rValue = DefaultSettings.rValue
     @AppStorage("gValue") var gValue = DefaultSettings.gValue
     @AppStorage("bValue") var bValue = DefaultSettings.bValue
+    @State var showSettings = false
     var sex: String
     var body: some View {
         ZStack(alignment: .top) {
@@ -18,7 +19,6 @@ struct Header: View {
                 .foregroundColor(Color(red: rValue / 255, green: gValue / 255, blue: bValue / 255))
                 .edgesIgnoringSafeArea(.top)
                 .frame(height: 100)
-
             Image(sex)
                 .resizable()
                 .frame(width: 250, height: 250)

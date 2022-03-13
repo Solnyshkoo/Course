@@ -11,16 +11,37 @@ import SwiftUI
 struct PersonalView: View {
     @Binding var people: UserInfo
     @State var showSetting = false
+    @State private var selectedIndex = 0
     var body: some View {
         VStack {
             VStack {
                 Header(sex: people.sex)
                 ProfileText(people: $people)
+                Picker("Favorite Color", selection: $selectedIndex, content: {
+                                Text("History").tag(0)
+                                Text("My events").tag(1)
+                            })
+                .pickerStyle(SegmentedPickerStyle())
+                
+                // TODO сделать норм
+                if selectedIndex == 1 {
+                    Circle().foregroundColor(Color.red)
+                } else {
+                    Circle().foregroundColor(Color.blue)
+                }
             }
+        
+            // <1>
             Spacer()
+            Button(
+                action: { self.showSetting.toggle() },
+                label: {
+                    Label("Edit", systemImage: "pencil")
+                })
         }
     }
 }
+
 struct BindingViewExamplePreviewContainer_2: View {
     @State var lol: UserInfo = .init(name: "Ksenia", surname: "Perova", age: "18", nickname: "ksu", password: "123", sex: "female")
 

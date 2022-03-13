@@ -22,7 +22,6 @@ struct ProfileText: View {
 //            Text(description)
 //                .multilineTextAlignment(.center)
 //                .padding()
-            Spacer()
         }
     }
 }
