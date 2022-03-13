@@ -25,6 +25,12 @@
 		5E87389227DD2FD60070B465 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87389127DD2FD60070B465 /* TabBar.swift */; };
 		5E87389427DD31C60070B465 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87389327DD31C60070B465 /* EventsView.swift */; };
 		5E87389627DD322C0070B465 /* OrganizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87389527DD322C0070B465 /* OrganizerView.swift */; };
+		5E87389827DD3B160070B465 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87389727DD3B160070B465 /* SettingsView.swift */; };
+		5E87389A27DD3C3F0070B465 /* DefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87389927DD3C3F0070B465 /* DefaultSettings.swift */; };
+		5E87389C27DD3D0A0070B465 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87389B27DD3D0A0070B465 /* Header.swift */; };
+		5E87389E27DD46300070B465 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87389D27DD46300070B465 /* UserInfo.swift */; };
+		5E8738A027DD477B0070B465 /* ProfileText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87389F27DD477B0070B465 /* ProfileText.swift */; };
+		5E8738A227DD65970070B465 /* PersonalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8738A127DD65970070B465 /* PersonalViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +53,12 @@
 		5E87389127DD2FD60070B465 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		5E87389327DD31C60070B465 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		5E87389527DD322C0070B465 /* OrganizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizerView.swift; sourceTree = "<group>"; };
+		5E87389727DD3B160070B465 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		5E87389927DD3C3F0070B465 /* DefaultSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSettings.swift; sourceTree = "<group>"; };
+		5E87389B27DD3D0A0070B465 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		5E87389D27DD46300070B465 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		5E87389F27DD477B0070B465 /* ProfileText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileText.swift; sourceTree = "<group>"; };
+		5E8738A127DD65970070B465 /* PersonalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +202,8 @@
 		5E7EC09527DA95C900A93BF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E87389927DD3C3F0070B465 /* DefaultSettings.swift */,
+				5E87389D27DD46300070B465 /* UserInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +211,7 @@
 		5E7EC09627DA95ED00A93BF2 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E8738A127DD65970070B465 /* PersonalViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -205,6 +220,9 @@
 			isa = PBXGroup;
 			children = (
 				5E87388F27DD1A7A0070B465 /* PersonalView.swift */,
+				5E87389727DD3B160070B465 /* SettingsView.swift */,
+				5E87389B27DD3D0A0070B465 /* Header.swift */,
+				5E87389F27DD477B0070B465 /* ProfileText.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -323,12 +341,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E87389C27DD3D0A0070B465 /* Header.swift in Sources */,
 				5E7EC08F27DA1DAA00A93BF2 /* MailConfirmationView.swift in Sources */,
 				5E7EC08527D91D5E00A93BF2 /* LogInViewModel.swift in Sources */,
 				5E7EC07427D9143F00A93BF2 /* Course.xcdatamodeld in Sources */,
 				5E7EC08327D91C8800A93BF2 /* MainView.swift in Sources */,
 				5E7EC08027D916D500A93BF2 /* ColorPalette.swift in Sources */,
+				5E8738A027DD477B0070B465 /* ProfileText.swift in Sources */,
+				5E87389827DD3B160070B465 /* SettingsView.swift in Sources */,
+				5E8738A227DD65970070B465 /* PersonalViewModel.swift in Sources */,
 				5E7EC08727D91EB400A93BF2 /* ClassicTextField.swift in Sources */,
+				5E87389E27DD46300070B465 /* UserInfo.swift in Sources */,
 				5E7EC07127D9143F00A93BF2 /* Persistence.swift in Sources */,
 				5E7EC09127DA521700A93BF2 /* PasswordView.swift in Sources */,
 				5E7EC06A27D9143D00A93BF2 /* ContentView.swift in Sources */,
@@ -336,6 +359,7 @@
 				5E87389627DD322C0070B465 /* OrganizerView.swift in Sources */,
 				5E7EC08B27D92FD700A93BF2 /* RegistrationView.swift in Sources */,
 				5E7EC08D27D93F9200A93BF2 /* SecretTextField.swift in Sources */,
+				5E87389A27DD3C3F0070B465 /* DefaultSettings.swift in Sources */,
 				5E7EC06827D9143D00A93BF2 /* CourseApp.swift in Sources */,
 				5E87389227DD2FD60070B465 /* TabBar.swift in Sources */,
 				5E87389427DD31C60070B465 /* EventsView.swift in Sources */,

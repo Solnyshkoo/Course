@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 struct PasswordView: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @StateObject private var mainViewMode = LogInViewModel()
     var title: String
     var twoPassword: Bool
+    @Binding var man: UserInfo
     @State private var showingHomeView = false
     @State var firstPassword = ""
-    @State var secondPassword = ""
-    @State var nickname = ""
     var body: some View {
         VStack {
             NavigationView {
@@ -25,32 +25,36 @@ struct PasswordView: View {
                             if self.twoPassword {
                                 SecretTextField(labelText: "Password", fieldText: "Enter Your Password", pass: $firstPassword).padding(.bottom, 20)
                             } else {
-                                ClassicTextField(labelText: "Nickname", fieldText: "Write Your nickname", user: $nickname).padding(.bottom, 20)
+                                ClassicTextField(labelText: "Nickname", fieldText: "Write Your nickname", user: $man.nickname).padding(.bottom, 20)
                             }
-                            SecretTextField(labelText: (twoPassword ? "Repeat" : "")  + " Password", fieldText: "Enter Your Password" + (twoPassword ? " again" : ""), pass: $secondPassword).padding(.bottom, 20)
+                            SecretTextField(labelText: (twoPassword ? "Repeat" : "") + " Password", fieldText: "Enter Your Password" + (twoPassword ? " again" : ""), pass: $man.password).padding(.bottom, 20)
                         }.padding(.horizontal, 6)
                     }.padding()
-                    Button(action: {self.showingHomeView.toggle()}) {
+                    Button(action: {
+                        self.showingHomeView.toggle()
+                        
+                    }) {
                         Text("Continue").foregroundColor(ColorPalette.mainBackground).frame(width: UIScreen.main.bounds.width - 120).padding()
                    
                     }.background(ColorPalette.logInButtons)
                         .clipShape(Capsule())
-                        .padding(.top, 45).fullScreenCover(isPresented: $showingHomeView) {
-                            TabBar()
+                        .padding(.top, 45)
+                        .onTapGesture(perform: {})
+                        .fullScreenCover(isPresented: $showingHomeView) {
+                            TabBar(people: $man)
                         }
                 }.padding(.bottom, 250)
-                .navigationBarBackButtonHidden(true)
-                .toolbar(content: {
-                    ToolbarItem(placement: .navigation) {
-                        Image(systemName: "arrow.left")
-                            .foregroundColor(ColorPalette.navigationBarItem)
-                            .onTapGesture {
-                                self.mode.wrappedValue.dismiss()
-                            }
-                    }
-                })
+                    .navigationBarBackButtonHidden(true)
+                    .toolbar(content: {
+                        ToolbarItem(placement: .navigation) {
+                            Image(systemName: "arrow.left")
+                                .foregroundColor(ColorPalette.navigationBarItem)
+                                .onTapGesture {
+                                    self.mode.wrappedValue.dismiss()
+                                }
+                        }
+                    })
             }
         }
     }
 }
-

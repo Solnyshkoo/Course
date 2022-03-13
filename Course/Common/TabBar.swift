@@ -9,6 +9,7 @@ import Foundation
 
 import SwiftUI
 struct TabBar: View {
+    @Binding var people: UserInfo
     var body: some View {
         TabView {
             OrganizerView()
@@ -21,7 +22,7 @@ struct TabBar: View {
                     Image(systemName: "tv.fill")
                     Text("Second Tab")
                 }
-            PersonalView()
+            PersonalView(people: $people)
                 .tabItem {
                     Image(systemName: "circle")
                     Text("Personal")
@@ -30,8 +31,3 @@ struct TabBar: View {
     }
 }
 
-struct TabBar_Preview: PreviewProvider {
-    static var previews: some View {
-        TabBar().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}

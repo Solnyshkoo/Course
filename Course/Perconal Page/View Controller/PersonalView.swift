@@ -9,16 +9,15 @@ import Foundation
 
 import SwiftUI
 struct PersonalView: View {
+    @Binding var people: UserInfo
+    @State var showSetting = false
     var body: some View {
-        Color.red
-    }
-    
-    
-}
-
-
-struct PersonalView_Previews: PreviewProvider {
-    static var previews: some View {
-        PersonalView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        VStack {
+            VStack {
+                Header(sex: people.sex)
+                ProfileText(people: $people)
+            }
+            Spacer()
+        }
     }
 }
