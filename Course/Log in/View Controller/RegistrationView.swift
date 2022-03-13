@@ -12,6 +12,7 @@ struct RegistrationView: View {
     @Binding var man: UserInfo
     @StateObject private var mainViewMode = LogInViewModel()
 
+
     @State private var showingRegistrationView = false
     var body: some View {
         VStack {
@@ -24,12 +25,12 @@ struct RegistrationView: View {
                
                             ClassicTextField(labelText: "Surname", fieldText: "Write your Surname", user: $man.surname).padding(.bottom, 15)
                
-                            ClassicTextField(labelText: "Patronymic", fieldText: "Write your patronymic", user: $man.patronymic).padding(.bottom, 15)
+                            ClassicTextField(labelText: "Patronymic", fieldText: "Write your patronymic (optional)", user: $man.patronymic).padding(.bottom, 15)
                
                             ClassicTextField(labelText: "Age", fieldText: "Write your age", user: $man.age).padding(.bottom, 15)
                
-                            ClassicTextField(labelText: "Number", fieldText: "Write your number", user: $man.number).padding(.bottom, 15)
-                            ClassicTextField(labelText: "Sex", fieldText: "Write your sex", user: $man.sex).padding(.bottom, 15)
+                            ClassicTextField(labelText: "Number", fieldText: "Write your number (optional)", user: $man.number).padding(.bottom, 15)
+                            ClassicTextField(labelText: "Sex", fieldText: "Write your sex (optional)", user: $man.sex).padding(.bottom, 15)
                         }.padding(.horizontal, 6)
                     }.padding()
                     VStack {
@@ -39,7 +40,8 @@ struct RegistrationView: View {
                         }) {
                             Text("Continue").foregroundColor(ColorPalette.mainBackground).frame(width: UIScreen.main.bounds.width - 120).padding()
                       
-                        }.background(ColorPalette.logInButtons)
+                        }.disabled(man.name.isEmpty || man.surname.isEmpty || man.age.isEmpty)
+                        .background(man.name.isEmpty || man.surname.isEmpty || man.age.isEmpty ? ColorPalette.disableButtom : ColorPalette.logInButtons)
                             .clipShape(Capsule())
                             .padding(.top, 15)
                             .foregroundColor(ColorPalette.activeText).fullScreenCover(isPresented: $showingRegistrationView) {

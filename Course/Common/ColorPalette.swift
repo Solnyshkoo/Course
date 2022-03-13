@@ -41,6 +41,11 @@ class ColorPalette {
         Color.blue
        // UIColor(red: 216/255, green: 218/255, blue: 220/255, alpha: 1)
     }
+    // используется
+    static var disableButtom: Color {
+        Color.gray
+       // UIColor(red: 216/255, green: 218/255, blue: 220/255, alpha: 1)
+    }
 
     static var text: UIColor {
         UIColor.black

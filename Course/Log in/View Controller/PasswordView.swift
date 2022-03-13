@@ -36,7 +36,9 @@ struct PasswordView: View {
                     }) {
                         Text("Continue").foregroundColor(ColorPalette.mainBackground).frame(width: UIScreen.main.bounds.width - 120).padding()
                    
-                    }.background(ColorPalette.logInButtons)
+                    }.disabled(man.password.isEmpty || (firstPassword.isEmpty && man.nickname.isEmpty))
+                    .background( man.password.isEmpty || (firstPassword.isEmpty && man.nickname.isEmpty) ?
+                                 ColorPalette.disableButtom : ColorPalette.logInButtons)
                         .clipShape(Capsule())
                         .padding(.top, 45)
                         .onTapGesture(perform: {})

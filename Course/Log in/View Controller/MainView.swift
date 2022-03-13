@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 struct MainView: View {
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @StateObject private var mainViewMode = LogInViewModel()
     @State var man = UserInfo()
     @State var enterText: String = ""
@@ -16,6 +17,7 @@ struct MainView: View {
     @State var hidde = true
     @State private var showingRegistrationView = false
     @State private var showingRestoringView = false
+    @State private var showingHoneView = false
     var body: some View {
         VStack {
             Text("Sign In").fontWeight(.heavy).font(.largeTitle).padding([.top, .bottom], 20)
@@ -32,17 +34,33 @@ struct MainView: View {
                 }.padding(.horizontal, 6)
             }.padding()
             VStack {
-                Button(action: {}) {
+                Button(action: {
+                    self.showingHoneView.toggle()
+                }) {
                     Text("Sign In").foregroundColor(ColorPalette.mainBackground).frame(width: UIScreen.main.bounds.width - 120).padding()
-                }.background(ColorPalette.logInButtons)
+                }.disabled(user.isEmpty || pass.isEmpty)
+                    .background(user.isEmpty || pass.isEmpty ? ColorPalette.disableButtom : ColorPalette.logInButtons)
                     .clipShape(Capsule())
                     .padding(.top, 45)
+                    .fullScreenCover(isPresented: $showingHoneView) {
+                        TabBar(people: $man)
+                    }.onTapGesture {
+                        if true {
+                            self.mode.wrappedValue.dismiss()
+                        }
+                    }
+                
+                
                 Text("(or)").foregroundColor(ColorPalette.subtitle).padding(.top, 30)
                 HStack(spacing: 8) {
-                    Text("Don't Have An Account ?").foregroundColor(ColorPalette.subtitle)
-                    Button(action: { showingRegistrationView.toggle() }) {
+                    Text("Don't Have An Account?").foregroundColor(ColorPalette.subtitle)
+                    Button(action: {
+                        showingRegistrationView.toggle()
+                        
+                    }) {
                         Text("Sign Up")
-                    }.foregroundColor(ColorPalette.activeText)
+                    }
+                    .foregroundColor(ColorPalette.activeText)
                         .fullScreenCover(isPresented: $showingRegistrationView) {
                             RegistrationView(man: $man)
                         }

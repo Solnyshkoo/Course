@@ -31,14 +31,15 @@ struct MailConfirmationView: View {
                         }.padding(.horizontal, 6)
 
                     }.padding()
-                    // TODO: anable Button
+                   
                     VStack {
                         Button(action: {
                             self.showTextFieldView = true
 
                         }) {
                             Text("Send password").foregroundColor(ColorPalette.mainBackground).frame(width: UIScreen.main.bounds.width - 120).padding()
-                        }.background(ColorPalette.logInButtons)
+                        }.disabled(man.mail.isEmpty)
+                        .background(man.mail.isEmpty ? ColorPalette.disableButtom : ColorPalette.logInButtons)
                             .clipShape(Capsule())
                             .padding(.top, 20).padding(.top, 10)
                     }
@@ -81,7 +82,8 @@ struct checkKey: View {
 
         }) {
             Text("Check").foregroundColor(ColorPalette.mainBackground).frame(width: UIScreen.main.bounds.width - 120).padding()
-        }.background(ColorPalette.logInButtons)
+        }
+        .background(ColorPalette.logInButtons)
             .clipShape(Capsule())
             .padding(.top, 50).fullScreenCover(isPresented: $showPasswordView) {
                 PasswordView(title: newPassword ? "Create new password" : "Set info ", twoPassword: newPassword, man: $man)
