@@ -21,3 +21,16 @@ struct PersonalView: View {
         }
     }
 }
+struct BindingViewExamplePreviewContainer_2: View {
+    @State var lol: UserInfo = .init(name: "Ksenia", surname: "Perova", age: "18", nickname: "ksu", password: "123", sex: "female")
+
+    var body: some View {
+        PersonalView(people: $lol)
+    }
+}
+
+struct PersonalView_Previews: PreviewProvider {
+    static var previews: some View {
+        BindingViewExamplePreviewContainer_2()
+    }
+}
