@@ -11,8 +11,8 @@ struct Header: View {
     @AppStorage("rValue") var rValue = DefaultSettings.rValue
     @AppStorage("gValue") var gValue = DefaultSettings.gValue
     @AppStorage("bValue") var bValue = DefaultSettings.bValue
-    @State var showSettings = false
-    var sex: String
+    @Binding var people: UserInfo
+    @State private var showSettings = false
     var body: some View {
         ZStack(alignment: .top) {
             Rectangle()
@@ -22,7 +22,7 @@ struct Header: View {
                 .overlay(
                     HStack {
                         Spacer()
-                        Button(action: {}) {
+                        Button(action: {self.showSettings.toggle()}) {
                             Image(systemName: "gearshape")
                                 .resizable()
                                 .foregroundColor(Color.white)
@@ -31,8 +31,11 @@ struct Header: View {
                         }.edgesIgnoringSafeArea(.top)
                     }.edgesIgnoringSafeArea(.top)
                     .padding(.horizontal, 30)
+                        .sheet(isPresented: $showSettings, content: {
+                            SettingsView(people: $people)
+                        })
                 )
-            Image(sex)
+            Image(people.sex)
                 .resizable()
                 .frame(width: 250, height: 250)
                 .clipShape(Circle())
@@ -43,8 +46,17 @@ struct Header: View {
     }
 }
 
+struct HeaderPreviewContainer_2: View {
+    @State var lol: UserInfo = .init(name: "Ksenia", surname: "Perova", age: "18", nickname: "ksu", password: "123", sex: "female")
+
+    var body: some View {
+        Header(people: $lol)
+    }
+}
+
+
 struct Header_Previews: PreviewProvider {
     static var previews: some View {
-        Header(sex: "female").environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        HeaderPreviewContainer_2()
     }
 }

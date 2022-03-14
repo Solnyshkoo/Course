@@ -15,7 +15,7 @@ struct PersonalView: View {
     var body: some View {
         VStack {
             VStack {
-                Header(sex: people.sex)
+                Header(people: $people)
                 ProfileText(people: $people)
                 Picker("Favorite Color", selection: $selectedIndex, content: {
                                 Text("History").tag(0)
