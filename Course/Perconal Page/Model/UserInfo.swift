@@ -18,4 +18,7 @@ struct UserInfo {
     var number: String = ""
     var mail: String = ""
     var sex: String = ""
+    var image: UIImage?
+    
+    
 }

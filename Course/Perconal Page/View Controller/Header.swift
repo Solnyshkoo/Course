@@ -35,13 +35,25 @@ struct Header: View {
                             SettingsView(people: $people)
                         })
                 )
-            Image(people.sex)
-                .resizable()
-                .frame(width: 250, height: 250)
-                .clipShape(Circle())
-
-                .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                .shadow(radius: 10)
+            if people.image == nil {
+                Image(people.sex)
+                    .resizable()
+                    .cornerRadius(50)
+                    .frame(width: 250, height: 250)
+                    .clipShape(Circle())
+                    .aspectRatio(contentMode: .fill)
+                    .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                    .shadow(radius: 10)
+            } else {
+                Image(uiImage: people.image!)
+                    .resizable()
+                    .frame(width: 250, height: 250)
+                    .clipShape(Circle())
+                    
+                    .overlay(Circle().stroke(Color.white, lineWidth: 4))
+                    .shadow(radius: 10)
+            }
+            
         }
     }
 }

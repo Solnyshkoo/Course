@@ -26,18 +26,75 @@ struct SettingsView: View {
     }
 }
 
+struct SUImagePickerView: UIViewControllerRepresentable {
+    
+    @State private var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    @Binding var image: UIImage?
+    @Binding var isPresented: Bool
+    
+    func makeCoordinator() -> ImagePickerViewCoordinator {
+        return ImagePickerViewCoordinator(image: $image, isPresented: $isPresented)
+    }
+    
+    func makeUIViewController(context: Context) -> UIImagePickerController {
+        let pickerController = UIImagePickerController()
+        pickerController.sourceType = sourceType
+        pickerController.delegate = context.coordinator
+        return pickerController
+    }
+
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
+        // Nothing to update here
+    }
+
+}
+
+class ImagePickerViewCoordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    @Binding var image: UIImage?
+    @Binding var isPresented: Bool
+    
+    init(image: Binding<UIImage?>, isPresented: Binding<Bool>) {
+        self._image = image
+        self._isPresented = isPresented
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.image = image
+        }
+        self.isPresented = false
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        self.isPresented = false
+    }
+    
+}
+
+
+
+
+
+
 struct ProfileSettings: View {
     @Binding var people: UserInfo
+    @State private var changePhoto = false
+
     var body: some View {
         Section(header: Text("Profile")) {
             Button (
                 action: {
-                    // Action
+                    self.changePhoto.toggle()
                 },
                 label: {
                     Text("Pick Profile Image")
                 }
-            )
+            ).sheet(isPresented: $changePhoto) {
+                SUImagePickerView(image: $people.image, isPresented: $changePhoto)
+                
+            }
+
             TextField("Name", text: $people.name)
             TextField("Surname", text: $people.surname)
             TextEditor(text: $people.nickname)
