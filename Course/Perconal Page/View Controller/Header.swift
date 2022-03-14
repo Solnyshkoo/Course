@@ -22,7 +22,7 @@ struct Header: View {
                 .overlay(
                     HStack {
                         Spacer()
-                        Button(action: {self.showSettings.toggle()}) {
+                        Button(action: { self.showSettings.toggle() }) {
                             Image(systemName: "gearshape")
                                 .resizable()
                                 .foregroundColor(Color.white)
@@ -30,7 +30,7 @@ struct Header: View {
                                 .padding(.vertical)
                         }.edgesIgnoringSafeArea(.top)
                     }.edgesIgnoringSafeArea(.top)
-                    .padding(.horizontal, 30)
+                        .padding(.horizontal, 30)
                         .sheet(isPresented: $showSettings, content: {
                             SettingsView(people: $people)
                         })
@@ -49,23 +49,21 @@ struct Header: View {
                     .resizable()
                     .frame(width: 250, height: 250)
                     .clipShape(Circle())
-                    
+
                     .overlay(Circle().stroke(Color.white, lineWidth: 4))
                     .shadow(radius: 10)
             }
-            
         }
     }
 }
 
 struct HeaderPreviewContainer_2: View {
-    @State var lol: UserInfo = .init(name: "Ksenia", surname: "Perova", age: "18", nickname: "ksu", password: "123", sex: "female")
+    @State var lol: UserInfo = .init(name: "Ksenia", surname: "Perova", age: 18, nickname: "ksu", password: "123", sex: "female")
 
     var body: some View {
         Header(people: $lol)
     }
 }
-
 
 struct Header_Previews: PreviewProvider {
     static var previews: some View {

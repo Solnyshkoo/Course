@@ -32,6 +32,8 @@
 		5E8738A027DD477B0070B465 /* ProfileText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87389F27DD477B0070B465 /* ProfileText.swift */; };
 		5E8738A227DD65970070B465 /* PersonalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8738A127DD65970070B465 /* PersonalViewModel.swift */; };
 		5E8738A427DF65A30070B465 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8738A327DF65A20070B465 /* SearchBar.swift */; };
+		5E8738A627DFCA130070B465 /* ProfileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8738A527DFCA120070B465 /* ProfileSettings.swift */; };
+		5E8738A827DFCA5D0070B465 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8738A727DFCA5D0070B465 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +63,8 @@
 		5E87389F27DD477B0070B465 /* ProfileText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileText.swift; sourceTree = "<group>"; };
 		5E8738A127DD65970070B465 /* PersonalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewModel.swift; sourceTree = "<group>"; };
 		5E8738A327DF65A20070B465 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		5E8738A527DFCA120070B465 /* ProfileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettings.swift; sourceTree = "<group>"; };
+		5E8738A727DFCA5D0070B465 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,8 +227,10 @@
 			children = (
 				5E87388F27DD1A7A0070B465 /* PersonalView.swift */,
 				5E87389727DD3B160070B465 /* SettingsView.swift */,
+				5E8738A727DFCA5D0070B465 /* ImagePicker.swift */,
 				5E87389B27DD3D0A0070B465 /* Header.swift */,
 				5E87389F27DD477B0070B465 /* ProfileText.swift */,
+				5E8738A527DFCA120070B465 /* ProfileSettings.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -346,6 +352,8 @@
 			files = (
 				5E87389C27DD3D0A0070B465 /* Header.swift in Sources */,
 				5E7EC08F27DA1DAA00A93BF2 /* MailConfirmationView.swift in Sources */,
+				5E8738A827DFCA5D0070B465 /* ImagePicker.swift in Sources */,
+				5E8738A627DFCA130070B465 /* ProfileSettings.swift in Sources */,
 				5E7EC08527D91D5E00A93BF2 /* LogInViewModel.swift in Sources */,
 				5E7EC07427D9143F00A93BF2 /* Course.xcdatamodeld in Sources */,
 				5E7EC08327D91C8800A93BF2 /* MainView.swift in Sources */,
