@@ -31,6 +31,7 @@
 		5E87389E27DD46300070B465 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87389D27DD46300070B465 /* UserInfo.swift */; };
 		5E8738A027DD477B0070B465 /* ProfileText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E87389F27DD477B0070B465 /* ProfileText.swift */; };
 		5E8738A227DD65970070B465 /* PersonalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8738A127DD65970070B465 /* PersonalViewModel.swift */; };
+		5E8738A427DF65A30070B465 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8738A327DF65A20070B465 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		5E87389D27DD46300070B465 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		5E87389F27DD477B0070B465 /* ProfileText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileText.swift; sourceTree = "<group>"; };
 		5E8738A127DD65970070B465 /* PersonalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewModel.swift; sourceTree = "<group>"; };
+		5E8738A327DF65A20070B465 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				5E87389327DD31C60070B465 /* EventsView.swift */,
+				5E8738A327DF65A20070B465 /* SearchBar.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				5E7EC06A27D9143D00A93BF2 /* ContentView.swift in Sources */,
 				5E87389027DD1A7A0070B465 /* PersonalView.swift in Sources */,
 				5E87389627DD322C0070B465 /* OrganizerView.swift in Sources */,
+				5E8738A427DF65A30070B465 /* SearchBar.swift in Sources */,
 				5E7EC08B27D92FD700A93BF2 /* RegistrationView.swift in Sources */,
 				5E7EC08D27D93F9200A93BF2 /* SecretTextField.swift in Sources */,
 				5E87389A27DD3C3F0070B465 /* DefaultSettings.swift in Sources */,

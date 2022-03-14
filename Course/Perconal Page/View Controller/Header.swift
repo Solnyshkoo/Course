@@ -19,6 +19,19 @@ struct Header: View {
                 .foregroundColor(Color(red: rValue / 255, green: gValue / 255, blue: bValue / 255))
                 .edgesIgnoringSafeArea(.top)
                 .frame(height: 100)
+                .overlay(
+                    HStack {
+                        Spacer()
+                        Button(action: {}) {
+                            Image(systemName: "gearshape")
+                                .resizable()
+                                .foregroundColor(Color.white)
+                                .frame(width: 25, height: 25)
+                                .padding(.vertical)
+                        }.edgesIgnoringSafeArea(.top)
+                    }.edgesIgnoringSafeArea(.top)
+                    .padding(.horizontal, 30)
+                )
             Image(sex)
                 .resizable()
                 .frame(width: 250, height: 250)

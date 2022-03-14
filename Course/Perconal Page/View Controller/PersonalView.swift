@@ -30,14 +30,6 @@ struct PersonalView: View {
                     Circle().foregroundColor(Color.blue)
                 }
             }
-        
-            // <1>
-            Spacer()
-            Button(
-                action: { self.showSetting.toggle() },
-                label: {
-                    Label("Edit", systemImage: "pencil")
-                })
         }
     }
 }

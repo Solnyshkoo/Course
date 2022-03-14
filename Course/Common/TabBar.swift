@@ -14,13 +14,11 @@ struct TabBar: View {
         TabView {
             OrganizerView()
                 .tabItem {
-                    Image(systemName: "phone.fill")
-                    Text("First Tab")
+                    Image("myEvents")
                 }
             EventsView()
                 .tabItem {
-                    Image(systemName: "tv.fill")
-                    Text("Second Tab")
+                    Image("all")
                 }
             PersonalView(people: $people)
                 .tabItem {
