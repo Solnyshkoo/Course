@@ -9,6 +9,7 @@ struct SettingsView: View {
             Form {
                 HeaderBackgroundSliders()
                 ProfileSettings(people: $people)
+                Favorites(people: $people)
             }
             .navigationBarTitle(Text("Settings"))
             .navigationBarItems(
@@ -22,6 +23,19 @@ struct SettingsView: View {
                     }
                 )
             )
+        }
+    }
+}
+
+struct Favorites: View {
+    @Binding var people: UserInfo
+    var body: some View {
+        Section(header: Text("My info")) {
+            HStack {
+                Text("Favorite")
+            }.onTapGesture {
+                
+            }
         }
     }
 }

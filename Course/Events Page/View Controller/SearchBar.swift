@@ -17,7 +17,7 @@ struct SearchBar: View {
             HStack {
                 TextField("Search", text: $searchText)
                     .padding(.leading, 32)
-            }.padding()
+            }.padding(13)
                 .background(Color(.systemGray5).opacity(0.75))
                 .cornerRadius(15)
                 .padding(.horizontal)
@@ -55,3 +55,18 @@ struct SearchBar: View {
         }
     }
 }
+
+struct SearchBarPreviewContainer_2: View {
+    @State var lol = ""
+    @State var lol2 = false
+    var body: some View {
+        SearchBar(searchText: $lol, isSearching: $lol2)
+    }
+}
+
+struct SearchBar_Previews: PreviewProvider {
+    static var previews: some View {
+        SearchBarPreviewContainer_2()
+    }
+}
+

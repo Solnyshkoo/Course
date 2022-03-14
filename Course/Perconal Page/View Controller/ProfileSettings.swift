@@ -48,3 +48,16 @@ struct ProfileSettings: View {
         }
     }
 }
+struct ProfileSettingsPreviewContainer_2: View {
+    @State var lol: UserInfo = .init(name: "Ksenia", surname: "Perova", age: 18, nickname: "ksu", password: "123", sex: "female")
+
+    var body: some View {
+        ProfileSettings(people: $lol)
+    }
+}
+
+struct ProfileSettings_Previews: PreviewProvider {
+    static var previews: some View {
+        SettingsViewePreviewContainer_2()
+    }
+}

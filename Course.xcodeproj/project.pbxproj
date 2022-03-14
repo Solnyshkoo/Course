@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E6C20D427DFEFE8009BDE53 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C20D327DFEFE8009BDE53 /* EventCell.swift */; };
+		5E6C20D627DFFA5F009BDE53 /* EventsAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C20D527DFFA5F009BDE53 /* EventsAPIModel.swift */; };
+		5E6C20D827DFFADA009BDE53 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C20D727DFFADA009BDE53 /* EventsViewModel.swift */; };
+		5E6C20DA27DFFB2B009BDE53 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C20D927DFFB2B009BDE53 /* APIService.swift */; };
+		5E6C20DC27DFFB94009BDE53 /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C20DB27DFFB94009BDE53 /* EventsModel.swift */; };
+		5E6C20DE27DFFC2B009BDE53 /* EventsInfoAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C20DD27DFFC2A009BDE53 /* EventsInfoAPIModel.swift */; };
 		5E7EC06827D9143D00A93BF2 /* CourseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC06727D9143D00A93BF2 /* CourseApp.swift */; };
 		5E7EC06A27D9143D00A93BF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC06927D9143D00A93BF2 /* ContentView.swift */; };
 		5E7EC06C27D9143F00A93BF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7EC06B27D9143F00A93BF2 /* Assets.xcassets */; };
@@ -37,6 +43,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E6C20D327DFEFE8009BDE53 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		5E6C20D527DFFA5F009BDE53 /* EventsAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAPIModel.swift; sourceTree = "<group>"; };
+		5E6C20D727DFFADA009BDE53 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		5E6C20D927DFFB2B009BDE53 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		5E6C20DB27DFFB94009BDE53 /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
+		5E6C20DD27DFFC2A009BDE53 /* EventsInfoAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsInfoAPIModel.swift; sourceTree = "<group>"; };
 		5E7EC06427D9143D00A93BF2 /* Course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Course.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7EC06727D9143D00A93BF2 /* CourseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseApp.swift; sourceTree = "<group>"; };
 		5E7EC06927D9143D00A93BF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,6 +135,9 @@
 		5E7EC07A27D9164500A93BF2 /* API Service */ = {
 			isa = PBXGroup;
 			children = (
+				5E6C20D927DFFB2B009BDE53 /* APIService.swift */,
+				5E6C20D527DFFA5F009BDE53 /* EventsAPIModel.swift */,
+				5E6C20DD27DFFC2A009BDE53 /* EventsInfoAPIModel.swift */,
 			);
 			path = "API Service";
 			sourceTree = "<group>";
@@ -238,6 +253,7 @@
 		5E7EC09827DA962D00A93BF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E6C20DB27DFFB94009BDE53 /* EventsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,6 +261,7 @@
 		5E7EC09927DA963B00A93BF2 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E6C20D727DFFADA009BDE53 /* EventsViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -254,6 +271,7 @@
 			children = (
 				5E87389327DD31C60070B465 /* EventsView.swift */,
 				5E8738A327DF65A20070B465 /* SearchBar.swift */,
+				5E6C20D327DFEFE8009BDE53 /* EventCell.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -352,6 +370,7 @@
 			files = (
 				5E87389C27DD3D0A0070B465 /* Header.swift in Sources */,
 				5E7EC08F27DA1DAA00A93BF2 /* MailConfirmationView.swift in Sources */,
+				5E6C20DA27DFFB2B009BDE53 /* APIService.swift in Sources */,
 				5E8738A827DFCA5D0070B465 /* ImagePicker.swift in Sources */,
 				5E8738A627DFCA130070B465 /* ProfileSettings.swift in Sources */,
 				5E7EC08527D91D5E00A93BF2 /* LogInViewModel.swift in Sources */,
@@ -369,11 +388,16 @@
 				5E87389027DD1A7A0070B465 /* PersonalView.swift in Sources */,
 				5E87389627DD322C0070B465 /* OrganizerView.swift in Sources */,
 				5E8738A427DF65A30070B465 /* SearchBar.swift in Sources */,
+				5E6C20D627DFFA5F009BDE53 /* EventsAPIModel.swift in Sources */,
 				5E7EC08B27D92FD700A93BF2 /* RegistrationView.swift in Sources */,
+				5E6C20D427DFEFE8009BDE53 /* EventCell.swift in Sources */,
 				5E7EC08D27D93F9200A93BF2 /* SecretTextField.swift in Sources */,
 				5E87389A27DD3C3F0070B465 /* DefaultSettings.swift in Sources */,
 				5E7EC06827D9143D00A93BF2 /* CourseApp.swift in Sources */,
+				5E6C20D827DFFADA009BDE53 /* EventsViewModel.swift in Sources */,
+				5E6C20DE27DFFC2B009BDE53 /* EventsInfoAPIModel.swift in Sources */,
 				5E87389227DD2FD60070B465 /* TabBar.swift in Sources */,
+				5E6C20DC27DFFB94009BDE53 /* EventsModel.swift in Sources */,
 				5E87389427DD31C60070B465 /* EventsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
