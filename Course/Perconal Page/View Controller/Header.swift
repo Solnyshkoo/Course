@@ -11,6 +11,7 @@ struct Header: View {
     @AppStorage("rValue") var rValue = DefaultSettings.rValue
     @AppStorage("gValue") var gValue = DefaultSettings.gValue
     @AppStorage("bValue") var bValue = DefaultSettings.bValue
+ 
     @Binding var people: UserInfo
     @State private var showSettings = false
     var body: some View {

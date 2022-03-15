@@ -19,6 +19,8 @@ struct UserInfo {
     var mail: String = ""
     var sex: String = ""
     var image: UIImage?
+    var favorities:[EventsModel] = []
+    var subscribes: [EventsModel] = []
     
     
 }

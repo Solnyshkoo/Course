@@ -16,7 +16,7 @@ struct TabBar: View {
                 .tabItem {
                     Image("myEvents")
                 }
-            EventsView()
+            EventsView(people:  $people)
                 .tabItem {
                     Image("all")
                 }

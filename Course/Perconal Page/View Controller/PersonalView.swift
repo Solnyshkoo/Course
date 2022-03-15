@@ -9,9 +9,13 @@ import Foundation
 
 import SwiftUI
 struct PersonalView: View {
+    
+    
     @Binding var people: UserInfo
     @State var showSetting = false
     @State private var selectedIndex = 0
+    
+ 
     var body: some View {
         VStack {
             VStack {
@@ -22,13 +26,23 @@ struct PersonalView: View {
                     Text("My events").tag(1)
                 })
                 .pickerStyle(SegmentedPickerStyle())
-
-                // TODO: сделать норм
+                Spacer()
                 if selectedIndex == 1 {
-                    Circle().foregroundColor(Color.red)
+                    Text("No events")
+                        .font(.title2)
                 } else {
-                    Circle().foregroundColor(Color.blue)
+                    if people.subscribes.isEmpty{
+                        Text("No events")
+                            .font(.title2)
+                    } else {
+                        ScrollView {
+                            ForEach(people.subscribes) { item in
+                                EventCell(event: item, people: $people)
+                            }
+                        }
+                    }
                 }
+                Spacer()
             }
         }
     }

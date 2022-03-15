@@ -10,6 +10,7 @@ import Foundation
 import SwiftUI
 
 struct EventsView: View {
+    @Binding var people: UserInfo
     @State private var elements = [EventsModel]()
     @ObservedObject private var eventsViewMode = EventsViewModel()
    
@@ -21,7 +22,7 @@ struct EventsView: View {
                 SearchBar(searchText: $searchText, isSearching: $isSearching)
                 ForEach(eventsViewMode.info) { item in
 
-                    EventCell(event: item)
+                    EventCell(event: item, people: $people)
                 }
             
            }
@@ -31,8 +32,8 @@ struct EventsView: View {
 }
 
 
-struct EventsView_Previews: PreviewProvider {
-    static var previews: some View {
-        EventsView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
+//struct EventsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EventsView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+//    }
+//}
