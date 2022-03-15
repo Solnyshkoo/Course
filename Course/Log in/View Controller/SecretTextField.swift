@@ -1,17 +1,9 @@
-//
-//  SecretTextField.swift
-//  Course
-//
-//  Created by Ksenia Petrova on 09.03.2022.
-//
-
 import Foundation
 import SwiftUI
 
 struct SecretTextField: View {
     var labelText: String
     var fieldText: String
-    // var width: CGFloat
     @Binding var pass: String
     @State var hidde = true
 

@@ -1,10 +1,3 @@
-//
-//  MainView.swift
-//  Course
-//
-//  Created by Ksenia Petrova on 09.03.2022.
-//
-
 import Foundation
 import SwiftUI
 struct MainView: View {
@@ -28,7 +21,6 @@ struct MainView: View {
                     Button(action: { showingRestoringView.toggle() }) {
                         Text("Forget password?").font(Font.system(size: 12, design: .default)).padding([.top, .leading], 5)
                     }.foregroundColor(ColorPalette.activeText).fullScreenCover(isPresented: $showingRestoringView) {
-                        // TODO: запрос на сервер
                         MailConfirmationView(man: $man, restorePassword: true)
                     }
                 }.padding(.horizontal, 6)
@@ -49,21 +41,19 @@ struct MainView: View {
                             self.mode.wrappedValue.dismiss()
                         }
                     }
-                
-                
                 Text("(or)").foregroundColor(ColorPalette.subtitle).padding(.top, 30)
                 HStack(spacing: 8) {
                     Text("Don't Have An Account?").foregroundColor(ColorPalette.subtitle)
                     Button(action: {
                         showingRegistrationView.toggle()
-                        
+
                     }) {
                         Text("Sign Up")
                     }
                     .foregroundColor(ColorPalette.activeText)
-                        .fullScreenCover(isPresented: $showingRegistrationView) {
-                            RegistrationView(man: $man)
-                        }
+                    .fullScreenCover(isPresented: $showingRegistrationView) {
+                        RegistrationView(man: $man)
+                    }
                 }.padding(.top, 25)
             }
         }

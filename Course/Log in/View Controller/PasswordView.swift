@@ -1,10 +1,3 @@
-//
-//  PasswordView.swift
-//  Course
-//
-//  Created by Ksenia Petrova on 10.03.2022.
-//
-
 import Foundation
 import SwiftUI
 struct PasswordView: View {
@@ -37,8 +30,8 @@ struct PasswordView: View {
                         Text("Continue").foregroundColor(ColorPalette.mainBackground).frame(width: UIScreen.main.bounds.width - 120).padding()
                    
                     }.disabled(man.password.isEmpty || (firstPassword.isEmpty && man.nickname.isEmpty))
-                    .background( man.password.isEmpty || (firstPassword.isEmpty && man.nickname.isEmpty) ?
-                                 ColorPalette.disableButtom : ColorPalette.logInButtons)
+                        .background(man.password.isEmpty || (firstPassword.isEmpty && man.nickname.isEmpty) ?
+                            ColorPalette.disableButtom : ColorPalette.logInButtons)
                         .clipShape(Capsule())
                         .padding(.top, 45)
                         .onTapGesture(perform: {})

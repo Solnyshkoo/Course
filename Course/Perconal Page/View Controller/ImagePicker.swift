@@ -1,10 +1,3 @@
-//
-//  ImagePicker.swift
-//  Course
-//
-//  Created by Ksenia Petrova on 14.03.2022.
-//
-
 import Foundation
 import SwiftUI
 struct ImagePicker: UIViewControllerRepresentable {

@@ -1,10 +1,3 @@
-//
-//  ProfileSettings.swift
-//  Course
-//
-//  Created by Ksenia Petrova on 14.03.2022.
-//
-
 import Foundation
 import SwiftUI
 struct ProfileSettings: View {
@@ -27,7 +20,7 @@ struct ProfileSettings: View {
             TextField("Name", text: $people.name)
             TextField("Surname", text: $people.surname)
             TextField("Nickname", text: $people.nickname)
-    
+
             VStack(alignment: .leading) {
                 Picker("Sex", selection: $people.sex) {
                     Text("none").tag("none")
@@ -36,7 +29,7 @@ struct ProfileSettings: View {
                 }.padding(.bottom, -3)
                     .colorMultiply(.black)
             }
-            
+
             VStack(alignment: .leading) {
                 Picker("Age", selection: $people.age) {
                     ForEach(years, id: \.self) {
@@ -48,6 +41,7 @@ struct ProfileSettings: View {
         }
     }
 }
+
 struct ProfileSettingsPreviewContainer_2: View {
     @State var lol: UserInfo = .init(name: "Ksenia", surname: "Perova", age: 18, nickname: "ksu", password: "123", sex: "female")
 

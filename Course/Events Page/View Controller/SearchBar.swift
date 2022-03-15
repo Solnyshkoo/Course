@@ -1,10 +1,3 @@
-//
-//  SearchBar.swift
-//  Course
-//
-//  Created by Ksenia Petrova on 14.03.2022.
-//
-
 import Foundation
 import SwiftUI
 
@@ -69,4 +62,3 @@ struct SearchBar_Previews: PreviewProvider {
         SearchBarPreviewContainer_2()
     }
 }
-

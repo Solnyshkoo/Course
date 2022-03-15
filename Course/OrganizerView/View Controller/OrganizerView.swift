@@ -1,10 +1,3 @@
-//
-//  PersonalViewController.swift
-//  Course
-//
-//  Created by Ksenia Petrova on 12.03.2022.
-//
-
 import Foundation
 
 import SwiftUI
@@ -26,14 +19,19 @@ struct OrganizerView: View {
                             .padding(.vertical)
                             .padding(.top, 50)
                     }.alert("Not availeble now. See in next update :)", isPresented: $showingAlert) {
-                        Button("OK", role: .cancel) { }
+                        Button("OK", role: .cancel) {}
                     }
                 }.padding(.horizontal, 30)
-                
+
                 SearchBar(searchText: $searchText, isSearching: $isSearching)
             }
 
-            ScrollView {}
+            ScrollView {
+                Spacer()
+                Text("No events")
+                    .font(.title2)
+                Spacer()
+            }
         }.edgesIgnoringSafeArea(.top)
     }
 }

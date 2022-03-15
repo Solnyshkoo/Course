@@ -1,10 +1,3 @@
-//
-//  AuthorizationView.swift
-//  Course
-//
-//  Created by Ksenia Petrova on 09.03.2022.
-//
-
 import Foundation
 import SwiftUI
 struct RegistrationView: View {
@@ -47,7 +40,7 @@ struct RegistrationView: View {
                                     Text("none").tag(0)
                                     Text("female").tag(1)
                                     Text("male").tag(2)
-                                    
+
                                 }.padding(.bottom, -3)
                                     .colorMultiply(.black)
                                 Divider()

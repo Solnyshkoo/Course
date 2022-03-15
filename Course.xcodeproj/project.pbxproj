@@ -14,7 +14,6 @@
 		5E6C20DC27DFFB94009BDE53 /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C20DB27DFFB94009BDE53 /* EventsModel.swift */; };
 		5E6C20DE27DFFC2B009BDE53 /* EventsInfoAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6C20DD27DFFC2A009BDE53 /* EventsInfoAPIModel.swift */; };
 		5E7EC06827D9143D00A93BF2 /* CourseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC06727D9143D00A93BF2 /* CourseApp.swift */; };
-		5E7EC06A27D9143D00A93BF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC06927D9143D00A93BF2 /* ContentView.swift */; };
 		5E7EC06C27D9143F00A93BF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7EC06B27D9143F00A93BF2 /* Assets.xcassets */; };
 		5E7EC06F27D9143F00A93BF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E7EC06E27D9143F00A93BF2 /* Preview Assets.xcassets */; };
 		5E7EC07127D9143F00A93BF2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7EC07027D9143F00A93BF2 /* Persistence.swift */; };
@@ -55,7 +54,6 @@
 		5E6C20DD27DFFC2A009BDE53 /* EventsInfoAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsInfoAPIModel.swift; sourceTree = "<group>"; };
 		5E7EC06427D9143D00A93BF2 /* Course.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Course.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E7EC06727D9143D00A93BF2 /* CourseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseApp.swift; sourceTree = "<group>"; };
-		5E7EC06927D9143D00A93BF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5E7EC06B27D9143F00A93BF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E7EC06E27D9143F00A93BF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5E7EC07027D9143F00A93BF2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 				5E7EC09227DA94D100A93BF2 /* Perconal Page */,
 				5E7EC09327DA955F00A93BF2 /* Events Page */,
 				5E7EC09427DA958200A93BF2 /* OrganizerView */,
-				5E7EC06927D9143D00A93BF2 /* ContentView.swift */,
 				5E7EC06B27D9143F00A93BF2 /* Assets.xcassets */,
 				5E7EC07027D9143F00A93BF2 /* Persistence.swift */,
 				5E7EC07227D9143F00A93BF2 /* Course.xcdatamodeld */,
@@ -459,7 +456,6 @@
 				5E7EC07127D9143F00A93BF2 /* Persistence.swift in Sources */,
 				5E7EC09127DA521700A93BF2 /* PasswordView.swift in Sources */,
 				5EF5B10627E09915007F6377 /* FavoriteView.swift in Sources */,
-				5E7EC06A27D9143D00A93BF2 /* ContentView.swift in Sources */,
 				5E87389027DD1A7A0070B465 /* PersonalView.swift in Sources */,
 				5EF5B10427E08B32007F6377 /* ActialPerson.swift in Sources */,
 				5E87389627DD322C0070B465 /* OrganizerView.swift in Sources */,

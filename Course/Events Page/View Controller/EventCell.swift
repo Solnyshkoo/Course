@@ -1,10 +1,3 @@
-//
-//  EventCell.swift
-//  Course
-//
-//  Created by Ksenia Petrova on 15.03.2022.
-//
-
 import Alamofire
 import Foundation
 import SwiftUI
@@ -33,7 +26,7 @@ struct EventCell: View {
                         } else {
                             people.subscribes.append(event)
                         }
-                       
+
                     }) {
                         Text(people.subscribes.contains(where: { $0.id == event.id }) ? "Signed" : "Subscribe").font(Font.system(size: 12, design: .default)).padding([.top, .leading], 5)
                     }.foregroundColor(ColorPalette.activeText)

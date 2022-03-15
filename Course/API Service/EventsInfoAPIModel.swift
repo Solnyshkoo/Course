@@ -1,10 +1,3 @@
-//
-//  EventsInfoAPIModel.swift
-//  Course
-//
-//  Created by Ksenia Petrova on 15.03.2022.
-//
-
 import Foundation
 struct EventsInfoApi: Codable {
     let id: Int
@@ -23,19 +16,21 @@ struct EventsInfoApi: Codable {
 }
 
 // MARK: - DateElement
+
 struct DateElement: Codable {
     let start, end: Int
 }
 
 // MARK: - Image
+
 struct ImageInfo: Codable {
     let image: String
     let source: Source
 }
 
 // MARK: - Source
+
 struct Source: Codable {
     let name: String
     let link: String
 }
-

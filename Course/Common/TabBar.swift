@@ -1,10 +1,3 @@
-//
-//  PersonalViewController.swift
-//  Course
-//
-//  Created by Ksenia Petrova on 12.03.2022.
-//
-
 import Foundation
 
 import SwiftUI
@@ -16,7 +9,7 @@ struct TabBar: View {
                 .tabItem {
                     Image("myEvents")
                 }
-            EventsView(people:  $people)
+            EventsView(people: $people)
                 .tabItem {
                     Image("all")
                 }
@@ -29,4 +22,3 @@ struct TabBar: View {
         }
     }
 }
-

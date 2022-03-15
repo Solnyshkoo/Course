@@ -1,10 +1,3 @@
-//
-//  MainView.swift
-//  Course
-//
-//  Created by Ksenia Petrova on 09.03.2022.
-//
-
 import Foundation
 import SwiftUI
 struct MailConfirmationView: View {
@@ -31,7 +24,7 @@ struct MailConfirmationView: View {
                         }.padding(.horizontal, 6)
 
                     }.padding()
-                   
+
                     VStack {
                         Button(action: {
                             self.showTextFieldView = true
@@ -39,7 +32,7 @@ struct MailConfirmationView: View {
                         }) {
                             Text("Send password").foregroundColor(ColorPalette.mainBackground).frame(width: UIScreen.main.bounds.width - 120).padding()
                         }.disabled(man.mail.isEmpty)
-                        .background(man.mail.isEmpty ? ColorPalette.disableButtom : ColorPalette.logInButtons)
+                            .background(man.mail.isEmpty ? ColorPalette.disableButtom : ColorPalette.logInButtons)
                             .clipShape(Capsule())
                             .padding(.top, 20).padding(.top, 10)
                     }
@@ -84,15 +77,9 @@ struct checkKey: View {
             Text("Check").foregroundColor(ColorPalette.mainBackground).frame(width: UIScreen.main.bounds.width - 120).padding()
         }
         .background(ColorPalette.logInButtons)
-            .clipShape(Capsule())
-            .padding(.top, 50).fullScreenCover(isPresented: $showPasswordView) {
-                PasswordView(title: newPassword ? "Create new password" : "Set info ", twoPassword: newPassword, man: $man)
-            }
+        .clipShape(Capsule())
+        .padding(.top, 50).fullScreenCover(isPresented: $showPasswordView) {
+            PasswordView(title: newPassword ? "Create new password" : "Set info ", twoPassword: newPassword, man: $man)
+        }
     }
 }
-
-// struct MailConfirmationView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MailConfirmationView(restorePassword: false, man: <#Binding<UserInfo>#>).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-//    }
-// }

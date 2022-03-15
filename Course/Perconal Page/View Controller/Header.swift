@@ -49,8 +49,9 @@ struct Header: View {
                 Image(uiImage: people.image!)
                     .resizable()
                     .frame(width: 250, height: 250)
+                    .cornerRadius(50)
                     .clipShape(Circle())
-
+                    .aspectRatio(contentMode: .fill)
                     .overlay(Circle().stroke(Color.white, lineWidth: 4))
                     .shadow(radius: 10)
             }

@@ -1,21 +1,11 @@
-//
-//  PersonalViewController.swift
-//  Course
-//
-//  Created by Ksenia Petrova on 12.03.2022.
-//
-
 import Foundation
 
 import SwiftUI
 struct PersonalView: View {
-    
-    
     @Binding var people: UserInfo
     @State var showSetting = false
     @State private var selectedIndex = 0
-    
- 
+
     var body: some View {
         VStack {
             VStack {
@@ -31,7 +21,7 @@ struct PersonalView: View {
                     Text("No events")
                         .font(.title2)
                 } else {
-                    if people.subscribes.isEmpty{
+                    if people.subscribes.isEmpty {
                         Text("No events")
                             .font(.title2)
                     } else {

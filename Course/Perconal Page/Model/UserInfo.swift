@@ -1,14 +1,6 @@
-//
-//  UserInfo.swift
-//  Course
-//
-//  Created by Ksenia Petrova on 13.03.2022.
-//
-
 import Foundation
 import SwiftUI
 struct UserInfo {
-    // Color Slider Values
     var name: String = ""
     var surname: String = ""
     var patronymic: String = ""
@@ -19,8 +11,6 @@ struct UserInfo {
     var mail: String = ""
     var sex: String = ""
     var image: UIImage?
-    var favorities:[EventsModel] = []
+    var favorities: [EventsModel] = []
     var subscribes: [EventsModel] = []
-    
-    
 }
