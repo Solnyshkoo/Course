@@ -7,6 +7,7 @@ struct PasswordView: View {
     var twoPassword: Bool
     @Binding var man: UserInfo
     @State private var showingHomeView = false
+    @State private var alert = false
     @State var firstPassword = ""
     var body: some View {
         VStack {
@@ -23,8 +24,17 @@ struct PasswordView: View {
                             SecretTextField(labelText: (twoPassword ? "Repeat" : "") + " Password", fieldText: "Enter Your Password" + (twoPassword ? " again" : ""), pass: $man.password).padding(.bottom, 20)
                         }.padding(.horizontal, 6)
                     }.padding()
+                    if alert {
+                        Text("Passwords are different").font(Font.system(size: 12, design: .default)).padding([.top, .leading], 5)
+                    } else {
+                        Text("Passwords are different").font(Font.system(size: 12, design: .default)).padding([.top, .leading], 5).hidden()
+                    }
                     Button(action: {
-                        self.showingHomeView.toggle()
+                        if !twoPassword || firstPassword == man.password {
+                            self.showingHomeView.toggle()
+                        } else {
+                            self.alert = true
+                        }
                         
                     }) {
                         Text("Continue").foregroundColor(ColorPalette.mainBackground).frame(width: UIScreen.main.bounds.width - 120).padding()

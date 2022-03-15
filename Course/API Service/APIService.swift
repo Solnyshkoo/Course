@@ -14,7 +14,7 @@ class APIService: ObservableObject {
         let parameters: [String: String] = [
             "lang": "en",
             "page": "\(page)",
-            "page_size": "40",
+            "page_size": "30",
             "fields": "id,slug,images,title,dates ",
             "order_by": "-publication_date"
         ]

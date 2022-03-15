@@ -6,7 +6,7 @@ struct RegistrationView: View {
     @StateObject private var mainViewMode = LogInViewModel()
     @State private var showingRegistrationView = false
     @State private var selectedColorIndex = 0
-    @State private var selectedYear = 18
+    @State private var selectedYear = ""
     var years = Array(16 ... 100)
     var body: some View {
         VStack {
@@ -37,10 +37,9 @@ struct RegistrationView: View {
                             VStack(alignment: .leading) {
                                 Text("Sex").font(.headline).fontWeight(.light).foregroundColor(Color(.label).opacity(0.75)).padding(.bottom, -3)
                                 Picker("sex", selection: $man.sex) {
-                                    Text("none").tag(0)
-                                    Text("female").tag(1)
-                                    Text("male").tag(2)
-
+                                    Text("").tag("none")
+                                    Text("female").tag("female")
+                                    Text("male").tag("male")
                                 }.padding(.bottom, -3)
                                     .colorMultiply(.black)
                                 Divider()

@@ -5,7 +5,7 @@ struct ProfileText: View {
     var body: some View {
         VStack(spacing: 15) {
             VStack(spacing: 5) {
-                Text("\(people.name) \(people.surname), \(people.age) age")
+                Text("\(people.name) \(people.surname)" + (people.age == -1 ? "" : ", \(people.age) age"))
                     .bold()
                     .font(.title)
                 Text(people.nickname)

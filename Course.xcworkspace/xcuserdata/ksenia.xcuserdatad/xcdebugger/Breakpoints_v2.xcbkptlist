@@ -14,10 +14,115 @@
             filePath = "Course/Events Page/View Controller/EventCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "6"
-            endingLineNumber = "6"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "EventCell"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "18202B95-27FB-4CAB-BE5E-0D55F9DE23D5 - 2c5e2ea408f98a3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Course.EventCell.people.getter : Course.UserInfo"
+                  moduleName = "Course"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ksenia/Desktop/Swift/Course/Course/Events%20Page/View%20Controller/EventCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "909">
+               </Location>
+               <Location
+                  uuid = "18202B95-27FB-4CAB-BE5E-0D55F9DE23D5 - bd7cb7acd4d2a631"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Course.EventCell.people.setter : Course.UserInfo"
+                  moduleName = "Course"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ksenia/Desktop/Swift/Course/Course/Events%20Page/View%20Controller/EventCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "236">
+               </Location>
+               <Location
+                  uuid = "18202B95-27FB-4CAB-BE5E-0D55F9DE23D5 - 5be5c467bbf86241"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Course.EventCell.people.modify : Course.UserInfo"
+                  moduleName = "Course"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ksenia/Desktop/Swift/Course/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  uuid = "18202B95-27FB-4CAB-BE5E-0D55F9DE23D5 - 784a8c6bcc168f31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Course.EventCell.people.modify : Course.UserInfo with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Course"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ksenia/Desktop/Swift/Course/Course/Events%20Page/View%20Controller/EventCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "74">
+               </Location>
+               <Location
+                  uuid = "18202B95-27FB-4CAB-BE5E-0D55F9DE23D5 - 532fa06541193865"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Course.EventCell.$people.getter : SwiftUI.Binding&lt;Course.UserInfo&gt;"
+                  moduleName = "Course"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ksenia/Desktop/Swift/Course/Course/Events%20Page/View%20Controller/EventCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "9"
+                  endingLineNumber = "9"
+                  offsetFromSymbolStart = "937">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ABB9D8B6-503A-40AA-BC42-88326D16313B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Course/Log in/View Controller/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90E3EE86-835C-4B7C-84B3-DA2D46F3DC67"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Course/Log in/View Controller/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
