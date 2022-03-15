@@ -9,6 +9,7 @@ import Foundation
 
 import SwiftUI
 struct EventsView: View {
+    @StateObject private var eventsViewMode = EventsViewModel()
     @State private var searchText = ""
     @State private var isSearching = false
     var body: some View {

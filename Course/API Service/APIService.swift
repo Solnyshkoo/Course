@@ -6,3 +6,10 @@
 //
 
 import Foundation
+final class APIService: ObservableObject {
+    func getEventsList(page: Int) -> [EventsInfoApi] {
+        var k:[EventsInfoApi] = []
+        return k
+    }
+}
+

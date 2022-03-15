@@ -6,11 +6,11 @@
 //
 
 import Foundation
-struct Events: Codable {
+struct EventsInfoApi: Codable {
     let id: Int
-    let dates: [DateElement]
+    let dates: DateElement
     let title, slug: String
-    let images: [ImageInfo]
+    let images: ImageInfo
     let siteURL: String
     let shortTitle: String
     enum CodingKeys: String, CodingKey {

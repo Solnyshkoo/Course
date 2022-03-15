@@ -33,7 +33,7 @@ struct EventCell: View {
 }
 
 struct EventCellPreviewContainer_2: View {
-    @State var lol: EventsModel = .init(id: 5, shortTitle: "Вечеринка диско", image: Image("female"), dataBegin: "08.08.22", dataEnd: "08.09.22")
+    @State var lol: EventsModel = .init(id: 5, shortTitle: "Вечеринка диско", image: Image("nopic"), dataBegin: "08.08.22", dataEnd: "08.09.22")
 
     var body: some View {
         EventCell(event: lol)
