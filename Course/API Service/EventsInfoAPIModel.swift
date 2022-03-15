@@ -8,7 +8,7 @@
 import Foundation
 struct EventsInfoApi: Codable {
     let id: Int
-    let dates: DateElement
+    let dates: [DateElement]
     let title, slug: String
     let images: ImageInfo
     let siteURL: String

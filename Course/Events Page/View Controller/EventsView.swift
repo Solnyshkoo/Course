@@ -8,29 +8,28 @@
 import Foundation
 
 import SwiftUI
+
 struct EventsView: View {
-    @StateObject private var eventsViewMode = EventsViewModel()
+    @State private var elements = [EventsModel]()
+    @ObservedObject private var eventsViewMode = EventsViewModel()
+   
     @State private var searchText = ""
     @State private var isSearching = false
     var body: some View {
         NavigationView {
-            ScrollView {
+           ScrollView {
                 SearchBar(searchText: $searchText, isSearching: $isSearching)
-                ForEach((0 ..< 20).filter { "\($0)".contains(searchText) || searchText.isEmpty },
-                        id: \.self) { num in
-                    HStack {
-                        Text("\(num)")
-                        Spacer()
-                    }.padding()
-                    Divider()
-                        .background(Color.black)
-                        .padding(.leading)
+                ForEach(eventsViewMode.info) { item in
+
+                    EventCell(event: item)
                 }
-            }
+            
+           }
             .navigationTitle("Events")
         }
     }
 }
+
 
 struct EventsView_Previews: PreviewProvider {
     static var previews: some View {
