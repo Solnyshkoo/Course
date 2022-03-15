@@ -19,9 +19,6 @@ struct ProfileText: View {
                     .font(.body)
                     .foregroundColor(.secondary)
             }.padding()
-//            Text(description)
-//                .multilineTextAlignment(.center)
-//                .padding()
         }
     }
 }

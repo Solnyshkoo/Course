@@ -5,9 +5,9 @@
 //  Created by Ksenia Petrova on 15.03.2022.
 //
 
+import Alamofire
 import Foundation
 import SwiftUI
-import Alamofire
 import UIKit
 struct EventCell: View {
     var event: EventsModel
@@ -27,19 +27,29 @@ struct EventCell: View {
                         .font(.title2)
                         .padding(.top, 10)
                     Button(action: {
-                        people.subscribes.append(event)
+                        if people.subscribes.contains(where: { $0.id == event.id }) {
+                            people.subscribes.remove(at:
+                                people.subscribes.firstIndex(where: { $0.id == event.id })!)
+                        } else {
+                            people.subscribes.append(event)
+                        }
+                       
                     }) {
-                        Text(people.subscribes.contains(where: {$0.id == event.id}) ? "Записан" : "Записаться").font(Font.system(size: 12, design: .default)).padding([.top, .leading], 5)
-                    }.foregroundColor(ColorPalette.activeText).disabled(people.subscribes.contains(where: {$0.id == event.id}))
+                        Text(people.subscribes.contains(where: { $0.id == event.id }) ? "Signed" : "Subscribe").font(Font.system(size: 12, design: .default)).padding([.top, .leading], 5)
+                    }.foregroundColor(ColorPalette.activeText)
                 }
                 Spacer()
                 Button(action: {
-                    people.favorities.append(event)
-        
+                    if people.favorities.contains(where: { $0.id == event.id }) {
+                        people.favorities.remove(at:
+                            people.favorities.firstIndex(where: { $0.id == event.id })!)
+                    } else {
+                        people.favorities.append(event)
+                    }
                 }) {
-                    Image(systemName: people.favorities.contains(where: {$0.id == event.id})  ? "heart.fill"  : "heart" ).font(Font.system(size: 15, design: .default)).padding(.top, 5)
+                    Image(systemName: people.favorities.contains(where: { $0.id == event.id }) ? "heart.fill" : "heart").font(Font.system(size: 15, design: .default)).padding(.top, 5)
                         .padding(.trailing, 2)
-                }.foregroundColor(people.favorities.contains(where: {$0.id == event.id}) ? Color.red : ColorPalette.activeText).disabled(people.favorities.contains(where: {$0.id == event.id}) )
+                }.foregroundColor(people.favorities.contains(where: { $0.id == event.id }) ? Color.red : ColorPalette.activeText)
             }
             Spacer()
         }.frame(height: 90)

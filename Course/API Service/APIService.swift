@@ -15,15 +15,12 @@ enum ObtainPostsResult {
     case failure(error: Error)
 }
 class APIService: ObservableObject {
-    
-
     func getEventsList(page: Int, completion: @escaping (ObtainPostsResult)-> Void) {
-        
         let url =  "https://kudago.com/public-api/v1.4/events"
         let parameters: [String: String] = [
           "lang": "en",
           "page": "\(page)",
-          "page_size":"100",
+          "page_size":"40",
           "fields": "id,slug,images,title,dates ",
           "order_by": "-publication_date"
         ]
@@ -43,8 +40,6 @@ class APIService: ObservableObject {
           do {
               let places = try decoder.decode(EventsApi.self, from: data)
               result = .success(posts: places.results)
-             // print(places.results)
-            
           } catch let DecodingError.dataCorrupted(context) {
               result = .failure(error: errSecInternalError as! Error)
               print(context)
@@ -64,60 +59,7 @@ class APIService: ObservableObject {
               result = .failure(error: errSecInternalError as! Error)
               print("error: ", error)
           }
-            
         }
-       
     }
-        
-        
-//
-//
-//               URLSession.shared.dataTask(with: url) { data, repo, error in
-//                   var result: ObtainPostsResult
-//
-//
-//                   if error == nil, let parseData = data {
-//
-//                       print(parseData)
-//                       print("_________parse")
-//                       guard let post = try? JSONDecoder().decode(EventsApi.self, from: parseData) else {
-//                           print(errSecInternalError)
-//
-//                           return
-//
-//                       }
-//                       result = .success(posts: post)
-//                   } else {
-//                       result = .failure(error: error!)
-//
-//                   }
-//                   print("_________")
-//                           print(result)
-//                           print("_________")
-//               }.resume()
-        
-        
-        
-        
-        
-        
-//        var components = URLComponents(string: "https://kudago.com/public-api/v1.4/events/?lang=en&order_by=-publication_date")!
-////        components.queryItems = [
-////            URLQueryItem(name: "page", value: "\(page)"),
-////        ]
-//        // 3
-//        let request = URLRequest(url: components.url!, timeoutInterval: 10)
-//        // 4
-//        let ans = URLSession.shared.dataTaskPublisher(for: request)
-//            .map(\.data)
-//            .decode(type: [EventsApi].self, decoder: JSONDecoder())
-//            .eraseToAnyPublisher()
-//        print("_________")
-//        print(ans)
-//        print("_________")
-        
-    
-
-   
 }
 

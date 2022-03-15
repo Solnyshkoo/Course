@@ -29,12 +29,15 @@ struct SettingsView: View {
 
 struct Favorites: View {
     @Binding var people: UserInfo
+    @State private var showFavorite = false
     var body: some View {
         Section(header: Text("My info")) {
             HStack {
                 Text("Favorite")
             }.onTapGesture {
-                
+                self.showFavorite.toggle()
+            }.fullScreenCover(isPresented: $showFavorite) {
+                FavoriteView(people: $people)
             }
         }
     }

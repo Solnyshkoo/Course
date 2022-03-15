@@ -41,6 +41,7 @@
 		5E8738A627DFCA130070B465 /* ProfileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8738A527DFCA120070B465 /* ProfileSettings.swift */; };
 		5E8738A827DFCA5D0070B465 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8738A727DFCA5D0070B465 /* ImagePicker.swift */; };
 		5EF5B10427E08B32007F6377 /* ActialPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5B10327E08B32007F6377 /* ActialPerson.swift */; };
+		5EF5B10627E09915007F6377 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF5B10527E09915007F6377 /* FavoriteView.swift */; };
 		841F04B4A897AF54C5E4647F /* Pods_Course.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E50173D3768EA351890358 /* Pods_Course.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		5E8738A527DFCA120070B465 /* ProfileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettings.swift; sourceTree = "<group>"; };
 		5E8738A727DFCA5D0070B465 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5EF5B10327E08B32007F6377 /* ActialPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActialPerson.swift; sourceTree = "<group>"; };
+		5EF5B10527E09915007F6377 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteView.swift; sourceTree = "<group>"; };
 		8743B4D05C19BF8BFB74A3AF /* Pods-Course.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Course.release.xcconfig"; path = "Target Support Files/Pods-Course/Pods-Course.release.xcconfig"; sourceTree = "<group>"; };
 		C7E50173D3768EA351890358 /* Pods_Course.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Course.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -256,6 +258,7 @@
 				5E87389B27DD3D0A0070B465 /* Header.swift */,
 				5E87389F27DD477B0070B465 /* ProfileText.swift */,
 				5E8738A527DFCA120070B465 /* ProfileSettings.swift */,
+				5EF5B10527E09915007F6377 /* FavoriteView.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				5E87389E27DD46300070B465 /* UserInfo.swift in Sources */,
 				5E7EC07127D9143F00A93BF2 /* Persistence.swift in Sources */,
 				5E7EC09127DA521700A93BF2 /* PasswordView.swift in Sources */,
+				5EF5B10627E09915007F6377 /* FavoriteView.swift in Sources */,
 				5E7EC06A27D9143D00A93BF2 /* ContentView.swift in Sources */,
 				5E87389027DD1A7A0070B465 /* PersonalView.swift in Sources */,
 				5EF5B10427E08B32007F6377 /* ActialPerson.swift in Sources */,
