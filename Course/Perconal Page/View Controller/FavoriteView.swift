@@ -20,8 +20,7 @@ struct FavoriteView: View {
         NavigationView {
            ScrollView {
                 SearchBar(searchText: $searchText, isSearching: $isSearching)
-               ForEach(people.favorities) { item in
-
+               ForEach((people.favorities).filter({"\($0.shortTitle)".contains(searchText.lowercased()) || searchText.isEmpty})) { item in
                     EventCell(event: item, people: $people)
                 }
             

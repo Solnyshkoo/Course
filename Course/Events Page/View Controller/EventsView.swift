@@ -20,8 +20,7 @@ struct EventsView: View {
         NavigationView {
            ScrollView {
                 SearchBar(searchText: $searchText, isSearching: $isSearching)
-                ForEach(eventsViewMode.info) { item in
-
+               ForEach((eventsViewMode.info).filter({"\($0.shortTitle)".contains(searchText.lowercased())) || searchText.isEmpty})) { item in
                     EventCell(event: item, people: $people)
                 }
             

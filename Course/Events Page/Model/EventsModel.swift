@@ -11,6 +11,4 @@ struct EventsModel : Identifiable{
     let id: Int
     let shortTitle: String
     let image: Image
-//    let dataBegin: String
-//    let dataEnd: String
 }
